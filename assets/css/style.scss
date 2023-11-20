@@ -28,34 +28,60 @@
         }
     }
 }
-
+// importing Google Font 'Turret Road'
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caudex&display=swap');
 :root {
-    --color-primary: black;
-    --color-sky: #f0f8ff;
-    --color-sub: rgb(130 130 130);
-    --color-bg: #fff5d1;
-    --color-low: #162dab;
-    --color-high: #d11305;
-    --color-obs: #006951;
-    --pad-small: 0.25rem;
-    --pad: 0.5rem;
-    --pad-large: 1rem;
-    --pad-xlarge: 2rem;
-    --pad-section: 3rem;
+    // --color-primary: black;
+    // --color-sky: #f0f8ff;
+    // --color-sub: rgb(130 130 130);
+    // --color-bg: #fff5d1;
+    // --color-low: #162dab;
+    // --color-high: #d11305;
+    // --color-obs: #006951;
+    // --pad-small: 0.25rem;
+    // --pad: 0.5rem;
+    // --pad-large: 1rem;
+    // --pad-xlarge: 2rem;
+    // --pad-section: 3rem;
+    // --monospace: "Courier", "Courier New", monospace;
+    // --font-family-heading: 'Turret Road', sans-serif; /* New variable for heading font */
+    // --font-xlarge: 2.5rem;
+    // --font-large: 2rem;
+    // --font-medium: 1.4rem;
+    // --font-body: 1rem;
+    // --font-small: 0.7rem;
+    // --max-img-width: 1040px;
+    // --max-content-width: 33rem;
+    // --content-width: 80%;
+    --color-primary: #333333; /* Dark gray for text on light background */
+    --color-sky: #ffffff; /* White for the background */
+    --color-sub: #666666; /* Medium gray for subtler text */
+    --color-bg: #f5f5f5; /* Light gray for the light background */
+    --color-low: #ff5500; /* NASA orange for low-tech solutions */
+    --color-high: #0072c2; /* NASA blue for high-tech problems */
+    --color-obs: #ed1c24; /* Red for obsolete technology */
+    --pad-small: 0.5rem; /* Slightly increased for more spacing */
+    --pad: 1rem; /* Increased for better readability */
+    --pad-large: 1.5rem; /* Adjusted for a more balanced look */
+    --pad-xlarge: 3rem; /* Increased for more spacing */
+    --pad-section: 4rem; /* Adjusted for better section spacing */
     --monospace: "Courier", "Courier New", monospace;
-    --font-xlarge: 2.5rem;
-    --font-large: 2rem;
-    --font-medium: 1.4rem;
-    --font-body: 1rem;
-    --font-small: 0.7rem;
-    --max-img-width: 1040px;
-    --max-content-width: 33rem;
-    --content-width: 80%;
-    @include media( tablet) {
-        --content-width: 90%;
+    --font-family: 'Caudex', serif;
+    --font-family-heading: 'Turret Road', sans-serif;
+    --font-xlarge: 4.5rem; /* Slightly increased for a more prominent feel */
+    --font-large: 3rem; /* Slightly increased for a more prominent feel */
+    --font-medium: 1.4rem; /* Adjusted for better hierarchy */
+    --font-body: 1.2rem; /* Adjusted for better readability */
+    --font-small: 0.8rem; /* Adjusted for better readability */
+    --max-img-width: 1200px; /* Increased for larger images */
+    --max-content-width: 28rem; /* Adjusted for narrower content */
+    --content-width: 70%; /* Adjusted for narrower content */
+    @include media(tablet) {
+        --content-width: 75%; /* Slightly increased for better spacing on tablets */
     }
-    @include media( mobile) {
-        --content-width: 100%;
+    @include media(mobile) {
+        --content-width: 80%; /* Slightly increased for better spacing on mobile devices */
     }
 }
 
@@ -70,7 +96,10 @@ html {
 }
 
 body {
+    font-family: 'Caudex', serif;
+    font-weight: 200;
     background: var(--color-bg);
+    margin: 0; /* Remove default body margin */
     color: var(--color-primary);
     padding: var(--pad-large);
 }
@@ -82,10 +111,13 @@ h4,
 h5,
 h6 {
     font-weight: normal;
+    font-family: var(--font-family-heading), sans-serif; /* Use the new heading font for all headings */
 }
 
 h1 {
     font-size: var(--font-xlarge);
+    font-weight: extrabold;
+    font-family: var(--font-family-heading), sans-serif; /* Use the new heading font for all headings */
     line-height: 1.0;
     text-indent: -.15rem;
 }
@@ -128,7 +160,10 @@ main {
 
 main,
 footer {
-    border-top: 2px solid var(--color-primary);
+    border-top: 1.5px dashed var(--color-primary); /* Changed to dashed line */
+    padding: 0px; /* Adjust the padding as needed */
+    margin-top: -15px; /* Added margin for spacing */
+
 }
 
 .site-header,
@@ -140,9 +175,31 @@ footer {
 }
 
 .site-header {
+    text-align: center;
+    padding-top: 30px;
+ 
+    
     h1 {
         text-transform: uppercase;
+        position: relative;  
+        // text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+            opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        // text-shadow: 0 0 10px #ff0000, 0 0 20px #ff8000, 0 0 30px #ffff00, 0 0 40px #80ff00, 0 0 50px #00ff80, 0 0 60px #00ffff, 0 0 70px #0080ff, 0 0 80px #0000ff, 0 0 90px #8000ff; /* Rainbow-like glow */
     }
+    100% {
+        opacity: 1;
+        // text-shadow: 0 0 20px #00ff00; /* End glow */
+    }
+}
+    
 }
 
 
@@ -276,8 +333,14 @@ NAVIGATION
 }
 
 nav {
+    text-align: left; /* Keep the navigation left-aligned */
+    margin-top: 30px; /* Adjust the top margin as needed */
+    font-family: 'Turret Road', sans-serif;
+    font-size: 16px; /* Adjust the size as needed */
+    
     a {
         border-bottom: none;
+        transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
     }
     &#menu>ul {
         li {
@@ -306,11 +369,36 @@ nav {
     }
 }
 
-// #menu-list .rss {
-//     position: relative;
-//     top: 3px;
-//     left: -5px;
-// }
+nav:hover {
+    // color: #ffcc00; /* Change to your desired hover color */
+    animation: glitch 5s 1 cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Apply neumorphic text shadow to the selected nav item on hover */
+nav a:hover {
+    // text-shadow: 0 0 5px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Add this CSS for a gentle side-to-side scrolling effect */
+@keyframes glitch {
+    0% {
+        transform: translateX(0);
+    // }
+    // 15%, 30%, 45%, 60%, 75%, 90% {
+    //     transform: translateX(-50px);
+    }
+    10%, 25%, 40%, 55%, 70%, 85%, 100% {
+        transform: translateX(10px);
+    }
+}
+
+
+#menu-list .rss {
+    position: relative;
+    top: 3px;
+    left: -5px;
+}
 .subtitle {
     line-height: 1.2;
     .icon {
@@ -365,10 +453,10 @@ nav {
     height: 25px;
     cursor: pointer;
     display: block;
-    // position: absolute;
-    // right: 10px;
+    position: absolute;
+    right: 10px;
     z-index: 200;
-    float: left;
+    // float: left;
 }
 
 
@@ -377,11 +465,10 @@ nav {
     font-size: var(--font-small);
     display: none;
     width: 150px;
-    left: 0;
     background: aliceblue;
     position: absolute;
-    top: 27px;
-    right: 0;
+    top: 40px;
+    right: 10px;
     z-index: 300;
     padding: var(--pad);
     border: 1px solid var(--color-primary);
@@ -502,6 +589,14 @@ time {
         height: 500px;
         overflow: hidden;
         background-size: cover;
+            /* Rounded border styles */
+        border-radius: 10px; /* Adjust the value to control the roundness */
+
+
+        overflow: hidden;    /* Ensure the rounded corners are visible */
+        /* Box shadow styles */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12); /* Adjust the values for the desired shadow */
+        
     }
     .entry-title {
         margin-top: 0;
@@ -517,6 +612,23 @@ time {
     background-size: cover;
     background-position: center;
     mix-blend-mode: multiply;
+        /* Rounded border styles */
+    border-radius: 10px; /* Adjust the value to control the roundness */
+    overflow: hidden;    /* Ensure the rounded corners are visible */
+    /* Box shadow styles */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.12); /* Adjust the values for the desired shadow */
+    /* Glowing Border */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added scaling transition */
+}
+.featured-img:hover {
+    // box-shadow: bright purple
+    //     0 0 30px rgba(0, 0, 255, 0.8),
+    //     0 0 40px rgba(75, 0, 130, 0.8),
+    //     0 0 50px rgba(148, 0, 211, 0.8);
+    box-shadow: 
+        0 0 8px rgba(255, 255, 255, 0.2), /* Adjust the values for a softer white shadow */
+        0 0 12px rgba(0, 0, 0, 0.2); /* Adjust the values for a softer black shadow */
+        transform: scale(1.01); /* Adjust the scaling factor for a sleek hover effect */
 }
 
 .pagination {
@@ -757,6 +869,11 @@ FIGURES AND IMAGES
 img {
     width: 100%;
     display: block;
+    /* Rounded border styles */
+    border-radius: 10px; /* Adjust the value to control the roundness */
+    overflow: hidden;    /* Ensure the rounded corners are visible */
+    
+    
 }
 
 figure {

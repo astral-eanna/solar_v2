@@ -1,0 +1,107 @@
+baseurl: "https://example.org/"
+languagecode: "en-us"
+title: "low←tech magazine"
+buildfuture: true
+builddrafts: false
+paginate: 12
+defaultcontentlanguage: "en"
+pluralizelisttitles: "false"
+reflinkserrorlevel: "warning"
+reflinksnotfoundurl: "/"
+timeout: 60000
+rsslimit: 3
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+enableinlineshortcodes: true
+permalinks:
+  posts: "/:year/:month/:slugorfilename/"
+  categories: "/:slug/"
+params:
+  author: "kris de decker"
+  newsletter: "https://d69baa34.sibforms.com/serve/muieajwiw9w82dl4ua6fqarpai-3qb-zvtwpnabhqgfh51migf69smy9loc_hpoumbj0emaxsxt87gcqxdpvtu-azsjchwhkkv21cdrcqu4gdnyahz-mriphwgdecaglzyxqfvkaqxg2odcbju4byodmzjk3ztczdo2jcwtfn-en0mgklvkgxx9tgdhqyopabmjcmf-agleclewv"
+  description: "this is a solar-powered website, which means it sometimes goes offline"
+
+menu:
+  main:
+    - name: about
+      pageref: /about
+      weight: 1
+    - name: low-tech solutions
+      pageref: /low-tech-solutions
+      weight: 2
+    - name: high-tech problems
+      pageref: /high-tech-problems
+      weight: 3
+    - name: obsolete technology
+      pageref: /obsolete-technology
+      weight: 4
+    - name: offline reading
+      pageref: /offline-reading
+      weight: 5
+    - name: archive
+      pageref: /archives
+      weight: 6
+    - name: donate
+      pageref: /donate
+      weight: 7
+    - name: ntm
+      url: "https://www.notechmagazine.com/"
+      weight: 8
+
+defaultcontentlanguage: "en"
+
+languages:
+      en:
+        languagename: "english"
+        weight: 1
+      fr:
+        languagename: "français"
+        weight: 2
+      de:
+        languagename: "deutsch"
+        weight: 3
+      nl:
+        languagename: "nederlands"
+        weight: 4
+      es:
+        languagename: "español"
+        weight: 5
+      it:
+        languagename: "italiano"
+        weight: 6
+      pt:
+        languagename: "português"
+        weight: 7
+      pl:
+        languagename: "polski"
+        weight: 8
+      ar:
+        languagename: "العربية"
+        languagedirection: "rtl"
+        weight: 9
+      vn:
+        languagename: "tiếng việt"
+        weight: 10
+      ko:
+        languagename: "한국어"
+        weight: 11
+taxonomies:
+  author: "authors"
+  tag: "tags"
+  category: "categories"
+  translator: "translators"
+  lang: "languages"
+related:
+  includenewer: true
+  threshold: 80
+  tolower: false
+related.indices:
+  - name: 'tags'
+    weight: 100
+  - name: 'lang'
+    weight: 80

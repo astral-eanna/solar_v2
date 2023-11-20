@@ -9,6 +9,8 @@ import argparse
 import shutil
 from PIL import Image
 import logging
+import random
+
 
 parser = argparse.ArgumentParser(
     """
@@ -57,10 +59,15 @@ def colorize(source_image, category):
     """
 
     colors = {
-            'low-tech': hitherdither.palette.Palette([(30,32,40), (11,21,71),(57,77,174),(158,168,218),(187,196,230),(243,244,250)]),
-            'obsolete': hitherdither.palette.Palette([(9,74,58), (58,136,118),(101,163,148),(144,189,179),(169,204,195),(242,247,246)]),
-            'high-tech': hitherdither.palette.Palette([(86,9,6), (197,49,45),(228,130,124),(233,155,151),(242,193,190),(252,241,240)]),
+            'low-tech solutions': hitherdither.palette.Palette([(30,32,40), (11,21,71),(57,77,174),(158,168,218),(187,196,230),(243,244,250)]),
+            'obsolete technology': hitherdither.palette.Palette([(9,74,58), (58,136,118),(101,163,148),(144,189,179),(169,204,195),(242,247,246)]),
+            'high-tech problems': hitherdither.palette.Palette([(86,9,6), (197,49,45),(228,130,124),(233,155,151),(242,193,190),(252,241,240)]),
             'grayscale': hitherdither.palette.Palette([(25,25,25), (75,75,75),(125,125,125),(175,175,175),(225,225,225),(250,250,250)])
+
+            # 'low-tech solutions': hitherdither.palette.Palette([(0, 128, 255), (0, 102, 204), (51, 153, 255),(120, 160, 255), (173, 216, 230), (255, 255, 255)]), this is a pretty blue
+            # 'obsolete technology': hitherdither.palette.Palette([(0, 204, 153), (88, 219, 168), (162, 229, 189),(187, 245, 204), (209, 229, 216), (255, 255, 255)]), this is a bright teal
+            # 'high-tech problems': hitherdither.palette.Palette([(255, 26, 26), (255, 84, 84), (255, 165, 165),(255, 199, 199), (255, 225, 225), (255, 250, 250)]), this is super saturated red
+            # 'grayscale': hitherdither.palette.Palette([(40, 40, 40), (100, 100, 100), (150, 150, 150),(200, 200, 200), (250, 250, 250), (255, 255, 255)])
         }
 
 
@@ -90,17 +97,24 @@ def dither_image(source_image, output_image, category ='grayscale'):
     if args.colorize:
         palette = colorize(source_image, category)
     else:
-        palette = hitherdither.palette.Palette([(25,25,25), (75,75,75),(125,125,125),(175,175,175),(225,225,225),(250,250,250)])
-
+        palette = hitherdither.palette.Palette([
+    (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+    (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+    (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+    (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+    (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
+    (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+])
     try:
         img= Image.open(source_image).convert('RGB')
         img.thumbnail((800,800), Image.LANCZOS)
         #palette = palettes[category]
-        threshold = [96, 96, 96]
+        threshold = [120, 120, 120]
         img_dithered = hitherdither.ordered.bayer.bayer_dithering(img, palette, threshold, order=8) 
-        #if args.colorize:
-        #    img_dithered = colorize(img_dithered, category)
-        #    logging.debug("Created {} in category {}".format(img_dithered, category))
+  
+        if args.colorize:
+          img_dithered = colorize(img_dithered, category)
+        logging.debug("Created {} in category {}".format(img_dithered, category))
             
         img_dithered.save(output_image, optimize=True)
 
@@ -117,6 +131,7 @@ def delete_dithers(content_dir):
         
 
 def parse_front_matter(md):
+    # print("parsing")
     with open(md) as f:
         contents = f.readlines()
         cat = None
@@ -126,17 +141,21 @@ def parse_front_matter(md):
                 cat = cat.strip("[")
                 cat = cat.strip()
                 cat = cat.strip("]")
+                cat = cat.strip('"')
 
                 logging.debug("Categories: {} from {}".format(cat, l.strip()))
+        # print(f"{md = }{cat = }")
         return cat
 
 prev_root = None
-
+logging.debug("here")
 if args.remove:
     delete_dithers(
         os.path.abspath(content_dir)
         )
 else:
+    logging.debug(f"{os.walk(os.path.abspath(content_dir), topdown=True) = }")
+
     for root, dirs, files in os.walk(os.path.abspath(content_dir), topdown=True):
         logging.debug("Checking next folder {}".format(root))
 
@@ -154,14 +173,14 @@ else:
                         logging.info("📁 created in {}".format(root))
 
         if args.colorize:
+            print(f"{args.colorize}")
+
             #iterate over md files to find one with a category
             if not category:
                 for i in os.listdir(root):
                     if i.startswith('index'):
-                        category2 = parse_front_matter(os.path.join(root,i))
-                        
+                        category = parse_front_matter(os.path.join(root,i))
                         break
-
 
         for fname in files:
             if fname.endswith(tuple(image_ext)):
@@ -170,8 +189,10 @@ else:
                     output_image = os.path.join(os.path.join(root, 'dithers'), file_+'_dithered.png')
                     if not os.path.exists(output_image):
                         if not args.colorize:
-                            category2 = "grayscale"
-                        dither_image(source_image,output_image, category2)
+                            category = "grayscale"
+                            print("this doesnt run")
+                        # print(f"{args.colorize}")
+                        dither_image(source_image,output_image, category)
                         logging.info("🖼 converted {}".format(fname))
                         logging.debug(output_image)
                     else:

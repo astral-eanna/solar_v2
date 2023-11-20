@@ -4,10 +4,10 @@
 # Support your local low-tech magazine: https://solar.lowtechmagazine.com/donate/
 
 now=`date`
-baseURL="" #the URL of the website e.g. htttps://solar.lowtechmagazine.com/
-contentDir="" #the directory where your HUGO articles are e.g. /path/to/repo/solar_v2/content/
-repoDir="" #the full path to the repository
-outputDir="" # the directory where you export the site to.
+baseURL="https://example.org/" #the URL of the website e.g. htttps://solar.lowtechmagazine.com/
+contentDir="/content" #the directory where your HUGO articles are e.g. /path/to/repo/solar_v2/content/
+repoDir="/Users/eanna/webdev/solar_v2" #the full path to the repository
+outputDir="/Users/eanna/webdev/solar_v2/public" # the directory where you export the site to.
 
 
 while getopts f flag
@@ -33,8 +33,14 @@ else
 
         cd $repoDir
 
+        echo "Deleting Old Images"
+        /usr/bin/python3 utils/dither_images.py -d $contentDir --remove
+
         echo "Dithering new images"
         /usr/bin/python3 utils/dither_images.py -d $contentDir --colorize
+
+        echo "Calculating page sizes"
+        /usr/bin/python3 utils/calculate_size.py --directory $outputDir --baseURL $baseURL
 
         echo "Generating site"
         hugo -b $baseURL --destination $outputDir

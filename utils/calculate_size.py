@@ -121,8 +121,11 @@ def insert_metadata(output_file, metadata, soup):
     if tag:
             with open(output_file,'w') as f:
                 tag.string = '{}'.format(metadata)
+                print(output_file)
+                print(metadata)
                 f.write(str(soup))
 
+logging.info ("Metadata updated to output file")
 logging.info("Checking file sizes for '{}'".format(content_dir))
 
 for root, dirs, files in os.walk(os.path.abspath(content_dir), topdown=True):
@@ -173,4 +176,10 @@ for root, dirs, files in os.walk(os.path.abspath(content_dir), topdown=True):
                 insert_metadata(os.path.join(root, fname), metadata, soup)
                 logging.debug("{} is {}".format(os.path.join(root,fname), metadata))
 
+                # insert_metadata("/Users/eanna/webdev/solar_v2/layouts/partials/" + "footer.html", metadata, soup)
+
+
+
 logging.info("Done checking filesizes")
+
+
