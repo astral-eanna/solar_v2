@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>low←tech magazine tiếng việt</title>
-    <link>https://example.org/vn/languages/</link>
-    <description>this is a solar-powered website, which means it sometimes goes offline</description>
+    <title>the alt-space blog tiếng việt</title>
+    <link>https://main--dulcet-daifuku-507020.netlify.app/vn/languages/</link>
+    <description>an alternative space blog, exploring the cosmos from unconventional perspectives 🔭</description>
     <generator>Hugo 0.120.3</generator>
-    <language>vn</language><atom:link href="https://example.org/vn/languages/index.xml" rel="self" type="application/rss+xml" />
+    <language>vn</language><atom:link href="https://main--dulcet-daifuku-507020.netlify.app/vn/languages/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

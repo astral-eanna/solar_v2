@@ -1,166 +1,212 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<title>Article Template: How to write articles and translations in Markdown for Hugo? | low←tech magazine</title>
-<meta content="this is a solar-powered website, which means it sometimes goes offline" name="description"/>
-<meta content="kris de decker" name="author"/>
-<link href="https://example.org/icons/sun.svg" rel="icon"/>
-<link href="https://example.org/css/style.css" rel="stylesheet"/><meta content="Article Template: How to write articles and translations in Markdown for Hugo?" property="og:title">
-<meta content="Article Template: How to write articles and translations in Markdown for Hugo?" name="twitter:title">
-<meta content="This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web." property="og:description">
-<meta content="This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web." name="twitter:description">
-<meta content="article" property="og:type">
-<meta content="https://example.org/article-template-how-to/" property="og:url"/>
-<meta content="https://example.org/article-template-how-to/images/dithers/image_dithered.png" itemprop="image" property="og:image"/>
-<meta content="https://example.org/article-template-how-to/images/dithers/image_dithered.png" property="og:image:secure_url"/>
-<meta content="image/png" property="og:image:type"/>
-<meta content="summary_large_image" name="twitter:card">
-<meta content="https://example.org/article-template-how-to/images/dithers/image_dithered.png" name="twitter:image"/>
-<meta content="" property="article:section"/>
-<meta content="low←tech magazine" property="og:site_name"/>
-<meta content="Marie Verdeil" property="article:author"/>
-<meta content="Marie Verdeil" name="citation_author"/>
-<meta content="" property="article:tag">
-</meta></meta></meta></meta></meta></meta></meta></head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Article Template: How to write articles and translations in Markdown for Hugo? | the alt-space blog</title>
+	<meta name="description" content="an alternative space blog, exploring the cosmos from unconventional perspectives 🔭">
+	<meta name="author" content="éanna cristin doyle">
+
+	<link rel="icon" href="https://main--dulcet-daifuku-507020.netlify.appicons/sun.svg">
+
+	
+	<link rel="stylesheet" href="https://main--dulcet-daifuku-507020.netlify.app/css/style.css"><meta property="og:title" content="Article Template: How to write articles and translations in Markdown for Hugo?" />
+<meta name="twitter:title" content="Article Template: How to write articles and translations in Markdown for Hugo?"/>
+
+<meta property="og:description" content="This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web." />
+
+<meta name="twitter:description" content="This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web."/>
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/" />
+
+
+
+<meta property="og:image" itemprop="image" content="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/dithers/image_dithered.png" />
+<meta property="og:image:secure_url" content="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/dithers/image_dithered.png" />
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/dithers/image_dithered.png"/>
+
+<meta property="article:section" content="" />
+
+<meta property="og:site_name" content="the alt-space blog" />
+
+
+<meta property="article:author" content="Marie Verdeil" />
+<meta name="citation_author" content="Marie Verdeil">
+
+
+<meta property="article:tag" content="" />
+</head>
 <body id="article-template-how-to-write-articles-and-translations-in-markdown-for-hugo">
-<div class="battery_bg">
-<div class="bat_status" data-charging="no" id="battery_data">
-<a href="https://example.org/power/" title="Power">
-<span id="charge_icon">
-<svg class="icon battery-svg" viewbox="0 0 500 500"><title>Battery used</title><polygon class="svg_stroke" points="327.01 127.16 327.01 47.31 172.99 47.31 172.99 127.16 115.52 127.16 115.52 452.69 384.48 452.69 384.48 127.16 327.01 127.16"></polygon><polygon class="svg_fill" points="357.64 408.86 158.26 408.86 158.26 209.49 357.64 408.86"></polygon></svg>
-<svg class="icon sun-svg" viewbox="0 0 500 500"><title>Battery charging</title><circle class="svg_fill" cx="248.48" cy="252.55" r="97.03"></circle><rect class="svg_fill" height="112.39" width="27.9" x="234.53" y="17.45"></rect><rect class="svg_fill" height="112.39" width="27.9" x="234.53" y="375.25"></rect><rect class="svg_fill" height="112.39" transform="translate(679.92 -174.83) rotate(90)" width="27.9" x="413.42" y="196.35"></rect><rect class="svg_fill" height="112.39" transform="translate(322.12 182.97) rotate(90)" width="27.9" x="55.63" y="196.35"></rect><rect class="svg_fill" height="112.39" transform="translate(198.96 -228.23) rotate(45)" width="27.9" x="361.03" y="69.85"></rect><rect class="svg_fill" height="112.39" transform="translate(303.75 24.77) rotate(45)" width="27.9" x="108.03" y="322.85"></rect><rect class="svg_fill" height="112.39" transform="translate(908.15 381.93) rotate(135)" width="27.9" x="361.03" y="322.85"></rect><rect class="svg_fill" height="112.39" transform="translate(297.35 128.93) rotate(135)" width="27.9" x="108.03" y="69.85"></rect></svg>
-</span>
-<span id="level"></span></a>
-</div>
-<div id="battery">
-</div>
-</div>
-<header class="site-header">
-<h1><a href="https://example.org/" id="top">low←tech magazine</a></h1>
-<div class="subtitle">
-<a href="https://example.org/power">this is a solar-powered website, which means it sometimes goes offline      
+	
+	<header class="site-header">
+  
+  <title>the alt-space blog</title>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  
+  const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+  
+  setDarkMode(isDarkMode);
+
+  
+  darkModeToggle.addEventListener('change', function () {
+    const darkModeEnabled = darkModeToggle.checked;
+    setDarkMode(darkModeEnabled);
+  });
+
+  
+  function setDarkMode(enabled) {
+    if (enabled) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  }
+});
+</script>
+
+
+</head>
+<body>
+
+<a href="https://main--dulcet-daifuku-507020.netlify.app/">
+<pre>
+  .                                            .
+  *   .                  .              .        .   *          .
+  _   _                  _ _                                   _     _             
+ | |_| |__   ___    __ _| | |_      ___ _ __   __ _  ___ ___  | |__ | | ___   __ _ 
+ | __| '_ \ / _ \  / _` | | __|____/ __| '_ \ / _` |/ __/ _ \ | '_ \| |/ _ \ / _` |
+ | |_| | | |  __/ | (_| | | ||_____\__ \ |_) | (_| | (_|  __/ | |_) | | (_) | (_| |
+  \__|_| |_|\___|  \__,_|_|\__|    |___/ .__/ \__,_|\___\___| |_.__/|_|\___/ \__, |
+                                       |_|                                  |___/
+                                              
+</pre>
+
+
+</a>
+  <div class="subtitle">
+     <a href="https://main--dulcet-daifuku-507020.netlify.app/about">an alternative space blog, exploring the cosmos from unconventional perspectives 🔭      
     </a>
+
+    
+    
+ 
+
+  
+
+  <nav id="menu">
+    <div id="menu-s">
+        <div id="lang-menu" title="languages" class="dark-mode-toggle">
+  
+    
+    <input type="checkbox" id="darkModeToggle" />
+    <label for="darkModeToggle"></label>
 </div>
-<nav id="menu">
-<div id="menu-s">
-<div id="lang-menu" title="languages">
-<svg class="icon" id="globe" viewbox="0 0 19.97 19.97" xmlns="http://www.w3.org/2000/svg"><circle class="stroke" cx="9.99" cy="9.99" r="9.24"></circle><ellipse class="stroke" cx="9.99" cy="9.99" rx="4.63" ry="9.24"></ellipse><line class="stroke" x1="9.99" x2="9.99" y1="0.75" y2="19.22"></line><line class="stroke" x1="18.39" x2="1.58" y1="12.99" y2="12.99"></line><line class="stroke" x1="18.39" x2="1.58" y1="6.99" y2="6.99"></line></svg>
-</div>
-<nav id="languages">
-<ul>
-<li>
-<a class="lang-option" href="https://example.org/">english</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/fr/">français</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/de/">deutsch</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/nl/">nederlands</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/es/">español</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/it/">italiano</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/pt/">português</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/pl/">polski</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/ar/">العربية</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/vn/">tiếng việt</a>
-</li>
-<li>
-<a class="lang-option" href="https://example.org/ko/">한국어</a>
-</li>
-</ul>
+
+
+        <span id="m-btn">menu</span>
+    </div>
+    
+    <ul id="menu-list">
+     
+         
+        <li class="">
+            <a href=" /about/ " data-nav="about" >
+                <span>about</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href="  " data-nav="human-in-space" >
+                <span>human in space</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href="  " data-nav="earth-and-sustainability" >
+                <span>earth and sustainability</span>
+            </a>
+        </li>
+        
+        <li class="">
+            <a href="  " data-nav="pancosmic-perspectives" >
+                <span>pancosmic perspectives</span>
+            </a>
+        </li>
+        
+        
+
+        
+        
+        
+        </li>
+    </ul>
 </nav>
-<span id="m-btn">menu</span>
-</div>
-<ul id="menu-list">
-<li class="">
-<a data-nav="about" href=" /about/ ">
-<span>about</span>
-</a>
-</li>
-<li class="">
-<a data-nav="low-tech-solutions" href=" /low-tech-solutions/ ">
-<span>low-tech solutions</span>
-</a>
-</li>
-<li class="">
-<a data-nav="high-tech-problems" href=" /high-tech-problems/ ">
-<span>high-tech problems</span>
-</a>
-</li>
-<li class="">
-<a data-nav="obsolete-technology" href=" /obsolete-technology/ ">
-<span>obsolete technology</span>
-</a>
-</li>
-<li class="">
-<a data-nav="offline-reading" href="  ">
-<span>offline reading</span>
-</a>
-</li>
-<li class="">
-<a data-nav="archive" href="  ">
-<span>archive</span>
-</a>
-</li>
-<li class="">
-<a data-nav="donate" href="  ">
-<span>donate</span>
-</a>
-</li>
-<li class="">
-<a data-nav="ntm" href=" https://www.notechmagazine.com/ " target="_blank">
-<span>ntm</span>
-</a>
-</li>
-<li class="rss">
-<a href="https://d69baa34.sibforms.com/serve/muieajwiw9w82dl4ua6fqarpai-3qb-zvtwpnabhqgfh51migf69smy9loc_hpoumbj0emaxsxt87gcqxdpvtu-azsjchwhkkv21cdrcqu4gdnyahz-mriphwgdecaglzyxqfvkaqxg2odcbju4byodmzjk3ztczdo2jcwtfn-en0mgklvkgxx9tgdhqyopabmjcmf-agleclewv" target="_blank"><svg class="icon" viewbox="0 0 80 80"><title>Newsletter</title><path d="M4.95,13.14v55H74.33v-55Zm54.34,8.12L39.64,39.74,20,21.26ZM13.07,60V25.91l26.56,25,26.57-25V60Z"></path></svg></a>
-<a href="/feeds" rel="alternate" target="_blank" type="application/atom+xml"><svg class="icon" viewbox="0 0 80 80"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"></circle><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"></path><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"></path></svg></a>
-</li>
-</ul>
-</nav>
+ 
 </header>
-<main class="article">
-<article>
-<section class="article" id="content">
-<header class="entry-header">
-<h1 class="entry-title">
+
+	
+
+<main class='article   '>
+
+	<article>
+		<section id="content" class="article">
+			<header class="entry-header">
+				<h1 class="entry-title">
 				Article Template: How to write articles and translations in Markdown for Hugo?</h1>
-<p class="summary">
+
+				<p class="summary">
 					This page goes over the specific markdown syntax that should be used to write articles, add translations and comments in the new hugo solar web.
 				</p>
-<div class="metadata">
-<div class="authors">
-<span class="byline">Written by</span>
-<span class="author"><a href="https://example.org/authors/marie-verdeil/">Marie Verdeil</a></span>
-</div>
-</div>
-</header>
-<div class="entry-content"><div class="article-img">
+				<div class="metadata">
+					
+					
+						
+							<div class="authors">
+								
+									<div class="author-container">
+										<div class="author-photo">
+											<img src="/images/eanna_dithered.png" alt="Author Photo">
+										</div>
+										
+										<span class="byline">Written by</span>
+										<div class="author-info">
+											<a href="https://main--dulcet-daifuku-507020.netlify.app/authors/marie-verdeil/" class="author-link" >
+												<span class="author-name">Marie Verdeil</span>
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						
+					
+				</div>
+					
+						
+
+						
+				</div>
+			</header>
+
+			<div class="entry-content"><div class="article-img ">
 <figure data-imgstate="dither">
-<img alt="A screenshot of the markdown file for this page." data-dither="/article-template-how-to/images/dithers/image_dithered.png" data-original="https://example.org/article-template-how-to/images/image_hu8f7c02f1efe333c44ec746f8371d4a52_205403_800x800_fit_q90_h2_box_3.webp" loading="lazy" src="https://example.org/article-template-how-to/images/dithers/image_dithered.png"/> </figure>
+<img src="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/dithers/image_dithered.png" alt='A screenshot of the markdown file for this page.' data-original="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/image_hu8f7c02f1efe333c44ec746f8371d4a52_205403_800x800_fit_q90_h2_box_3.webp" data-dither="/article-template-how-to/images/dithers/image_dithered.png" loading="lazy"/> </figure>
 <div class="figure-controls">
 <figcaption class="caption">
 <p>A screenshot of the markdown file for this page.
-<svg class="dither-toggle icon" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-<rect class="svg_fill" height="24.28" width="24.28" x="13.51" y="13.58"></rect><rect class="svg_fill" height="24.28" width="24.28" x="37.93" y="37.86"></rect><rect class="svg_fill" height="24.28" width="24.28" x="62.21" y="13.58"></rect><rect class="svg_fill" height="24.28" width="24.28" x="13.51" y="62.14"></rect><rect class="svg_fill" height="24.28" width="24.28" x="62.21" y="62.14"></rect>
+<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
 </svg></p>
 <div class="imgindicator">
 <span class="tooltip view-orig">
@@ -175,29 +221,29 @@
 </div>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li><a href="#files">Files</a>
+<li><a href="#files" >Files</a>
 <ul>
-<li><a href="#structure">Structure</a></li>
-<li><a href="#folder-name">Creating a new article</a></li>
-<li><a href="#index">Index</a></li>
-<li><a href="#comments-files">Comments file</a></li>
+<li><a href="#structure" >Structure</a></li>
+<li><a href="#folder-name" >Creating a new article</a></li>
+<li><a href="#index" >Index</a></li>
+<li><a href="#comments-files" >Comments file</a></li>
 </ul>
 </li>
-<li><a href="#syntax">Article Syntax</a>
+<li><a href="#syntax" >Article Syntax</a>
 <ul>
-<li><a href="#front-matter">Front Matter</a></li>
-<li><a href="#rules">Syntax rules</a></li>
-<li><a href="#main-rules">Main rules</a></li>
-<li><a href="#internal-links">Internal links</a></li>
+<li><a href="#front-matter" >Front Matter</a></li>
+<li><a href="#rules" >Syntax rules</a></li>
+<li><a href="#main-rules" >Main rules</a></li>
+<li><a href="#internal-links" >Internal links</a></li>
 </ul>
 </li>
-<li><a href="#syntax-images">Image shortcodes</a></li>
-<li><a href="#syntax-comments">Comments</a></li>
-<li><a href="#translations">Translations</a>
+<li><a href="#syntax-images" >Image shortcodes</a></li>
+<li><a href="#syntax-comments" >Comments</a></li>
+<li><a href="#translations" >Translations</a>
 <ul>
-<li><a href="#translations-front-matter">Translations front matter</a></li>
-<li><a href="#translations-internal-links">Translations internal links</a></li>
-<li><a href="#translations-meta">Translations of site metadata</a></li>
+<li><a href="#translations-front-matter" >Translations front matter</a></li>
+<li><a href="#translations-internal-links" >Translations internal links</a></li>
+<li><a href="#translations-meta" >Translations of site metadata</a></li>
 </ul>
 </li>
 </ul>
@@ -246,18 +292,18 @@
 <li>1 comments file (see below)</li>
 <li>1 <code>images/</code> folder where your images will live.</li>
 </ul>
-<p>To create an new page that isn’t an article, place the folder directly in <code>content/</code> or in <code>content/about/</code> for the about section.</p>
-<p>By default, your folder name is the article slug. The slug should match the title, but with the following rules. Use <code>"-"</code>instead of <code>" "</code> spaces and <strong>don’t</strong> include special character (no <code>,=;/%?! &amp;.@</code> etc.)</p>
+<p>To create an new page that isn&rsquo;t an article, place the folder directly in <code>content/</code> or in <code>content/about/</code> for the about section.</p>
+<p>By default, your folder name is the article slug. The slug should match the title, but with the following rules. Use <code>&quot;-&quot;</code>instead of <code>&quot; &quot;</code> spaces and <strong>don&rsquo;t</strong> include special character (no <code>,=;/%?! &amp;.@</code> etc.)</p>
 <pre tabindex="0"><code>/posts/my-article-name/index.en.md
 </code></pre><p>will become:</p>
 <pre tabindex="0"><code>https://solar.lowtechmagazine.com/YYYY/MM/my-article-name/ 
 </code></pre><h3 id="index"><strong>Index</strong></h3>
 <p>The article content should be in a file named <code>index.lang.md</code>. For an english article it would be <code>index.en.md</code>, for french translation  <code>index.fr.md</code>, etc.</p>
-<p>Regarding the syntax of the index files see the <a href="#syntax">Syntax section below</a>..</p>
+<p>Regarding the syntax of the index files see the <a href="#syntax" >Syntax section below</a>..</p>
 <h3 id="comments-files"><strong>Comments file</strong></h3>
-<p>The comments should now be placed in a different file in the article folder. The different comments are separated by languages and will appear in the corresponding article version. Each comments files should be named “comments.lang.md”. So for english it would be <code>comments.en.md</code>, for dutch  <code>comments.nl.md</code>, etc.</p>
+<p>The comments should now be placed in a different file in the article folder. The different comments are separated by languages and will appear in the corresponding article version. Each comments files should be named &ldquo;comments.lang.md&rdquo;. So for english it would be <code>comments.en.md</code>, for dutch  <code>comments.nl.md</code>, etc.</p>
 <p>The Comments will appear automatically at the end of the article, no need to add anything in the article file.</p>
-<p>Regarding the syntax of the comments files see the <a href="#syntax-comments">Comments section below</a>.</p>
+<p>Regarding the syntax of the comments files see the <a href="#syntax-comments" >Comments section below</a>.</p>
 <h3 id="output"><strong>Output</strong></h3>
 <p>The folder should look like this at start:</p>
 <pre tabindex="0"><code>my-article-name/
@@ -266,66 +312,66 @@
 │   └── images goes here. 
 └── index.lang.md
 </code></pre><h2 id="syntax">Syntax</h2>
-<p>The syntax of the markdown file has a few changes and additions in Hugo, which we will go over in this section. The specific changes related to Translations can be found in the<a href="#translations">Translations section below</a>.</p>
+<p>The syntax of the markdown file has a few changes and additions in Hugo, which we will go over in this section. The specific changes related to Translations can be found in the<a href="#translations" >Translations section below</a>.</p>
 <h2 id="front-matter">Front matter data</h2>
 <p>The Front matter data at the top of each article should follow the following syntax:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">"Article Title"</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">"2015-10-26"</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">"Article Summary"</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">"en"</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">"Kris De Decker"</span> ]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">"Low-tech Solutions"</span>]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">"tag"</span>, <span style="color:#e6db74">"tag2"</span> ]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">translators</span>: [<span style="color:#e6db74">""</span>]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">"image.png"</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Article Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">&#34;2015-10-26&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Article Summary&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">&#34;Kris De Decker&#34;</span> ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Low-tech Solutions&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;tag&#34;</span>, <span style="color:#e6db74">&#34;tag2&#34;</span> ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">translators</span>: [<span style="color:#e6db74">&#34;&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">&#34;image.png&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><p><strong><em>!Do not forget the <code>---</code> at the first and last line of the front matter!</em></strong></p>
 <ul>
 <li>Date should use the following YYYY-MM-DD syntax.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">"2015-10-26"</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">&#34;2015-10-26&#34;</span>
 </span></span></code></pre></div><ul>
 <li>Language should be using on the following: en (english), nl (dutch), fr (french) pl (polish), pt (portuguese), es (spanish), de (german), it (italian ), vn (vietnamese), ar (arabic), ko (korean).
 To add a different language translations changes in the config file are necessary.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">"en"</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;en&#34;</span>
 </span></span></code></pre></div><ul>
 <li>The authors, tags and translators fields support several entry, using this syntax:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">"Kris De Decker"</span> ]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">"Kris De Decker"</span>, <span style="color:#e6db74">"Roel Roscam Abbing"</span> ]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">"ICT"</span>, <span style="color:#e6db74">"transportation"</span> ] 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">&#34;Kris De Decker&#34;</span> ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">&#34;Kris De Decker&#34;</span>, <span style="color:#e6db74">&#34;Roel Roscam Abbing&#34;</span> ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;ICT&#34;</span>, <span style="color:#e6db74">&#34;transportation&#34;</span> ] 
 </span></span></code></pre></div><ul>
 <li>The correct spelling for categories is:
-<code>"Low-tech Solutions"</code> (Blue), <code>"High-tech Problems"</code> (Red),  <code>"Obsolete Technology"</code> (Green),  <code>"About"</code> or <code>" "</code> (BW)</li>
+<code>&quot;Low-tech Solutions&quot;</code> (Blue), <code>&quot;High-tech Problems&quot;</code> (Red),  <code>&quot;Obsolete Technology&quot;</code> (Green),  <code>&quot;About&quot;</code> or <code>&quot; &quot;</code> (BW)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">"Low-tech Solutions"</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Low-tech Solutions&#34;</span>]
 </span></span></code></pre></div><ul>
 <li>The featured image will appear as a thumbnail on the category page. Make sure the image is placed inside the <code>images/</code> folder. Do not include the file path, just the image with the correct extension (.png, .jpg).</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">"image.png"</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">&#34;image.png&#34;</span>
 </span></span></code></pre></div><ul>
 <li><code>draft: false</code> is the default. Setting this to <code>draft: true</code> will not generate the article. It will not be visible on the site anymore, only on gitlab.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
-</span></span></code></pre></div><p><em><strong>Always include at least:</strong></em> <code>title: "", date: "", summary: "Article Summary", lang: "en"</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span></code></pre></div><p><em><strong>Always include at least:</strong></em> <code>title: &quot;&quot;, date: &quot;&quot;, summary: &quot;Article Summary&quot;, lang: &quot;en&quot;</code></p>
 <p>Other metadata fields are available:</p>
 <ul>
-<li><code>slug: ""</code> : By default, the slug is the filename but you can overwrite this by adding a slug.</li>
+<li><code>slug: &quot;&quot;</code> : By default, the slug is the filename but you can overwrite this by adding a slug.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">"this-is-a-slug"</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;this-is-a-slug&#34;</span>
 </span></span></code></pre></div><ul>
-<li><code>unlisted: true</code> : Include this field to mark the article as unlisted: it will still be accessible via the url but won’t be listed in the index page.</li>
+<li><code>unlisted: true</code> : Include this field to mark the article as unlisted: it will still be accessible via the url but won&rsquo;t be listed in the index page.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">unlisted</span>: <span style="color:#66d9ef">true</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">unlisted</span>: <span style="color:#66d9ef">true</span>
 </span></span></code></pre></div><ul>
-<li><code>translators: [""]</code> : see <a href="#translations">Translations section below</a></li>
+<li><code>translators: [&quot;&quot;]</code> : see <a href="#translations" >Translations section below</a></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">translators</span>: [<span style="color:#e6db74">""</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">translators</span>: [<span style="color:#e6db74">&#34;&#34;</span>]
 </span></span></code></pre></div><h2 id="rules">Syntax Rules</h2>
-<p>The rest of of the document uses <a href="https://www.markdownguide.org/cheat-sheet" target="_blank">regular markdown syntax</a>, with a few exception. Markup conventions as follows:</p>
+<p>The rest of of the document uses <a href="https://www.markdownguide.org/cheat-sheet" target="_blank" >regular markdown syntax</a>, with a few exception. Markup conventions as follows:</p>
 <h3 id="main-rules"><strong>Main rules</strong></h3>
 <ul>
 <li><code>## Big headers are h2</code> and render as:</li>
@@ -345,54 +391,54 @@ To add a different language translations changes in the config file are necessar
 <li><code>* Lists</code> /  <code> - Lists</code> render as this list.</li>
 </ul>
 <ul>
-<li><em>Footnote references</em> use this syntax: <code>[^number]</code> and render as <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" role="doc-noteref">1</a></sup></li>
+<li><em>Footnote references</em> use this syntax: <code>[^number]</code> and render as <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></li>
 <li><em>Footnotes</em> appear the bottom of the document. The syntax is <code>[^1]: text</code></li>
 </ul>
 <ul>
-<li><code>[Hyperlinks](url)</code> linking to other websites render as: <a href="url">Hyperlinks</a></li>
+<li><code>[Hyperlinks](url)</code> linking to other websites render as: <a href="url" >Hyperlinks</a></li>
 </ul>
 <h3 id="internal-links"><strong>Internal Links</strong></h3>
 <p>To link to other articles on the solar website, we use a hugo specific shortcode to call the article folder. This has several advantages:</p>
 <ol>
 <li>The url will not break if the article slug changes, since we are calling the file itself.</li>
-<li>We don’t need to change the url when translating an article, it’s automatic: see <a href="#translations-internal-links">translations section</a>.</li>
+<li>We don&rsquo;t need to change the url when translating an article, it&rsquo;s automatic: see <a href="#translations-internal-links" >translations section</a>.</li>
 </ol>
 <ul>
-<li><em>Shortcode is written as follow and looks like this:</em> <a href="/">Text</a>.</li>
+<li><em>Shortcode is written as follow and looks like this:</em> <a href="/" >Text</a>.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Text</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">"/path-to-folder"</span> <span style="color:#f92672">/*</span>&gt;}})
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Text</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">&#34;/path-to-folder&#34;</span> <span style="color:#f92672">/*</span>&gt;}})
 </span></span></code></pre></div><p>The file path should start from within the content folder and link to the article or page folder, not the slug!</p>
 <ul>
 <li><em>Examples:</em></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Donate</span>]({{&lt;<span style="color:#f92672">/*</span> <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">"/donate"</span> &gt;}})
-</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">here</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">"/posts/power-water-networks/"</span> &gt;}})
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Donate</span>]({{&lt;<span style="color:#f92672">/*</span> <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">&#34;/donate&#34;</span> &gt;}})
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">here</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">&#34;/posts/power-water-networks/&#34;</span> &gt;}})
 </span></span></code></pre></div><ul>
-<li><em>To link to a section in the article</em> (render as: <a href="#section">Link to section</a>.)</li>
+<li><em>To link to a section in the article</em> (render as: <a href="#section" >Link to section</a>.)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Link</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">Section</span>](<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">section</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Link</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">Section</span>](<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">section</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">###</span> <span style="color:#a6e22e">Section</span> <span style="color:#a6e22e">Header</span>{<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">section</span>}
 </span></span></code></pre></div><h2 id="syntax-images">Images shortcodes</h2>
 <p>Images now use specific shortcodes instead of the classic markdown syntax. This allows t include a toggle linking to the original images and to embed the caption within the image and better control its styling.</p>
 <p>The shortcode is written:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#a6e22e">figure</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">"image-1.png"</span> <span style="color:#f92672">%</span>}} 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#a6e22e">figure</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;image-1.png&#34;</span> <span style="color:#f92672">%</span>}} 
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">Here</span> <span style="color:#a6e22e">goes</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">image</span> <span style="color:#a6e22e">caption</span>. 
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">You</span> <span style="color:#a6e22e">can</span> <span style="color:#a6e22e">include</span> <span style="color:#a6e22e">footnotes</span> [^<span style="color:#ae81ff">1</span>], 
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">Hyperlinks</span>](<span style="color:#a6e22e">https</span>:<span style="color:#75715e">//solar.lowtechmagazine.com), 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">and</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">regular</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">__markdown__</span> <span style="color:#a6e22e">syntax</span>.
 </span></span><span style="display:flex;"><span>{{<span style="color:#f92672">%</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">figure</span> <span style="color:#f92672">%</span>}}
 </span></span></code></pre></div><p>and render as:</p>
-<div class="article-img">
+<div class="article-img ">
 <figure data-imgstate="dither">
-<img alt="This is an image of the shortcode that generated it. You can include footnotes [^1], Hyperlinks, and regular markdown syntax." data-dither="/article-template-how-to/images/dithers/image-1_dithered.png" data-original="https://example.org/article-template-how-to/images/image-1_hu60feddd3dfb11f8744735d07d1b6af5f_40410_800x800_fit_q90_h2_box_3.webp" loading="lazy" src="https://example.org/article-template-how-to/images/dithers/image-1_dithered.png"/> </figure>
+<img src="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/dithers/image-1_dithered.png" alt='This is an image of the shortcode that generated it. You can include footnotes [^1], Hyperlinks, and regular markdown syntax.' data-original="https://main--dulcet-daifuku-507020.netlify.app/article-template-how-to/images/image-1_hu60feddd3dfb11f8744735d07d1b6af5f_40410_800x800_fit_q90_h2_box_3.webp" data-dither="/article-template-how-to/images/dithers/image-1_dithered.png" loading="lazy"/> </figure>
 <div class="figure-controls">
 <figcaption class="caption">
-<p>This is an image of the shortcode that generated it. You can include footnotes <sup id="fnref1:1"><a class="footnote-ref" href="#fn:1" role="doc-noteref">1</a></sup>,
-<a href="https://solar.lowtechmagazine.com" target="_blank">Hyperlinks</a>,
+<p>This is an image of the shortcode that generated it. You can include footnotes <sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>,
+<a href="https://solar.lowtechmagazine.com" target="_blank" >Hyperlinks</a>,
 and <em>regular</em> <strong>markdown</strong> syntax.
-<svg class="dither-toggle icon" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-<rect class="svg_fill" height="24.28" width="24.28" x="13.51" y="13.58"></rect><rect class="svg_fill" height="24.28" width="24.28" x="37.93" y="37.86"></rect><rect class="svg_fill" height="24.28" width="24.28" x="62.21" y="13.58"></rect><rect class="svg_fill" height="24.28" width="24.28" x="13.51" y="62.14"></rect><rect class="svg_fill" height="24.28" width="24.28" x="62.21" y="62.14"></rect>
+<svg class="dither-toggle icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<rect class="svg_fill" x="13.51" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="37.93" y="37.86" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="13.58" width="24.28" height="24.28"/><rect class="svg_fill" x="13.51" y="62.14" width="24.28" height="24.28"/><rect class="svg_fill" x="62.21" y="62.14" width="24.28" height="24.28"/>
 </svg></p>
 <div class="imgindicator">
 <span class="tooltip view-orig">
@@ -407,19 +453,19 @@ and <em>regular</em> <strong>markdown</strong> syntax.
 </div>
 <p>Captions are handy to include sources and additional info but are also useful for screen-readers users (people who cannot see images). Describing the image is thoughtful of them.</p>
 <p>To render uncompressed images (not dithered and not compressed in <code>.webp</code>), use the normal markdown syntax. This comes in handy for comic pages, for example. Please pre-compress the images to prevent overcrowding the server with big files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">here goes your alt text </span>](<span style="color:#a6e22e">image-filename.png</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">here goes your alt text </span>](<span style="color:#a6e22e">image-filename.png</span>)
 </span></span></code></pre></div><h2 id="syntax-comments">Comments</h2>
 <p>Comments are now added in a dedicated <code>comments.lang.md</code> file, as explained above.
 The file should start with the following lines:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><p>Each comment is then added:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">comment</span> <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">"Name"</span> &gt;}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{&lt; <span style="color:#a6e22e">comment</span> <span style="color:#a6e22e">name</span>=<span style="color:#e6db74">&#34;Name&#34;</span> &gt;}}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">This</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">comment</span> <span style="color:#a6e22e">text</span>.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>{{&lt;<span style="color:#f92672">/</span> <span style="color:#a6e22e">comment</span> &gt;}}
-</span></span></code></pre></div><p>Check out the result <a href="#comments-title">at the bottom</a></p>
+</span></span></code></pre></div><p>Check out the result <a href="#comments-title" >at the bottom</a></p>
 <h2 id="translations">Translations</h2>
 <p>To translate an article in a different language, another <code>index.lang.md</code> file should be created in the article folder as detailed above.</p>
 <h3 id="translations-front-matter"><strong>Front matter</strong></h3>
@@ -427,127 +473,177 @@ The file should start with the following lines:</p>
 <ul>
 <li><em>Front-matter that should be translated:</em></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">"Translate the title"</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">"YYYY-MM-DD"</span> <span style="color:#75715e">#of the translation</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">"Translate the Article Summary"</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">"en"</span> <span style="color:#75715e">#add the language code (fr, nl, etc.)</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">translators</span>: [<span style="color:#e6db74">"add translator name"</span>, <span style="color:#e6db74">"other translator"</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Translate the title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">&#34;YYYY-MM-DD&#34;</span> <span style="color:#75715e">#of the translation</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Translate the Article Summary&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#75715e">#add the language code (fr, nl, etc.)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">translators</span>: [<span style="color:#e6db74">&#34;add translator name&#34;</span>, <span style="color:#e6db74">&#34;other translator&#34;</span>]
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><ul>
-<li><em>Front matter that shouldn’t change, no matter the language:</em></li>
+<li><em>Front matter that shouldn&rsquo;t change, no matter the language:</em></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">"Kris De Decker"</span> ]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">"Low-tech Solutions"</span>]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">"tag"</span>, <span style="color:#e6db74">"tag2"</span> ]
-</span></span><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">"image.png"</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">authors</span>: [<span style="color:#e6db74">&#34;Kris De Decker&#34;</span> ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Low-tech Solutions&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;tag&#34;</span>, <span style="color:#e6db74">&#34;tag2&#34;</span> ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">&#34;image.png&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><h3 id="translations-internal-links"><strong>Internal Links</strong></h3>
 <p>When linking to articles on the website, the shortcode will handle directing to the correct translation automatically:</p>
-<p>On a french article <code>index.fr.md</code> the link will redirect to the french <a href="/fr/donate">donate</a> page.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Donate</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">"/donate"</span> &gt;}})
-</span></span></code></pre></div><p>Another example: this article <a href="">Bring back the Horses</a>  isn’t yet available in dutch. The shortcode below in a `index.nl.md_ file would lead to the english version, until the dutch translation is available:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Bring</span> <span style="color:#a6e22e">back</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">Horses</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">"/posts/bring-back-the-horses"</span> &gt;}})
+<p>On a french article <code>index.fr.md</code> the link will redirect to the french <a href="/fr/donate" >donate</a> page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Donate</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">&#34;/donate&#34;</span> &gt;}})
+</span></span></code></pre></div><p>Another example: this article <a href="" >Bring back the Horses</a>  isn&rsquo;t yet available in dutch. The shortcode below in a `index.nl.md_ file would lead to the english version, until the dutch translation is available:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>[<span style="color:#a6e22e">Bring</span> <span style="color:#a6e22e">back</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">Horses</span>]({{&lt; <span style="color:#a6e22e">ref</span> <span style="color:#e6db74">&#34;/posts/bring-back-the-horses&#34;</span> &gt;}})
 </span></span></code></pre></div><h3 id="translations-meta"><strong>Translating Site Metadata</strong></h3>
 <p>Another thing that needs to be translated is the many metadata words used in the website. Such as:</p>
 <ul>
-<li>“Translated by”</li>
-<li>“Written by”</li>
-<li>“View Original Image / View Dithered Image”</li>
-<li>“Subscribe to our Newsletter”</li>
+<li>&ldquo;Translated by&rdquo;</li>
+<li>&ldquo;Written by&rdquo;</li>
+<li>&ldquo;View Original Image / View Dithered Image&rdquo;</li>
+<li>&ldquo;Subscribe to our Newsletter&rdquo;</li>
 <li>etc.</li>
 </ul>
 <p>This metadata is stored in configuration files called <code>lang.toml</code> (<code>pl.toml</code>, <code>fr.toml</code>, etc.). Find this folder in <code>solar &gt; i18n &gt; lang.toml</code></p>
 <p><em>The syntax is (here for <code>nl.toml</code>):</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;" tabindex="0"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">pagesize</span>]
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">'Fill in here the word for page size'</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">pagesize</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#39;Fill in here the word for page size&#39;</span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">written_by</span>]
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">'Door'</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#39;Door&#39;</span>
 </span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">translated_by</span>]
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">'Vertaald door'</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">other</span> = <span style="color:#e6db74">&#39;Vertaald door&#39;</span>
 </span></span></code></pre></div><p>The <code>[key]</code> should not be changed and be the same in every language.</p>
 <p>The most complete files are the french (<code>fr.toml</code>) and dutch (<code>nl.toml</code>) one, refer to those to know what expressions need translation. Untranslated expressions will default back to english.</p>
 <p>Please reach out <em>marie @ verdeil . net</em> if you have any remaining questions.</p>
-</div>
-</section>
-<section class="comments" id="comments">
-<h2 id="comments-title">Comments </h2>
-<p><em>To make a comment, please send an e-mail to solar (at) lowtechmagazine (dot) com. Your e-mail address is not used for other purposes, and will be deleted after the comment is published. If you don’t want your real name to be published, sign the e-mail with the name you want to appear.</em></p>
-<details>
-<summary><span id="comment-count"></span> Reactions</summary>
-<div id="comments-list">
+
+			</div>
+			
+			
+			
+		</section>
+
+		
+		
+		<section class="comments" id="comments">
+			<h2 id="comments-title">Comments </h2>
+			<p><em>To make a comment, please send an e-mail to solar (at) lowtechmagazine (dot) com. Your e-mail address is not used for other purposes, and will be deleted after the comment is published. If you don’t want your real name to be published, sign the e-mail with the name you want to appear.</em></p>
+			<details>
+				<summary><span id="comment-count"></span> Reactions</summary>
+				<div id="comments-list">
+					
 <div class="comment">
-<h5>Name</h5>
-<p>This is the comment text.</p>
+	<h5>Name</h5>
+	<p>This is the comment text.</p>
+
 </div>
-</div>
-</details>
-</section>
-<section id="reference">
-<div class="footnotes" role="doc-endnotes">
-<hr/>
+
+				</div>
+			</details>			
+		</section>
+		
+
+		<section id="reference">
+			<div class="footnotes" role="doc-endnotes">
+			
+<hr>
 <ol>
 <li id="fn:1">
-<p>Footnotes appear here the bottom of the document. <a class="footnote-backref" href="#fnref:1" role="doc-backlink">↩︎</a> <a class="footnote-backref" href="#fnref1:1" role="doc-backlink">↩︎</a></p>
+<p>Footnotes appear here the bottom of the document.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
-</section>
-</article>
+
+		</section>
+
+
+		
+		
+		
+	</article>
 </main>
+
+	
 <footer class="site-footer">
-<div id="page-size">85.51KB</div>
+
+    
+
 <div id="back-to-top"><a href="#top" id="" title="Back to top"> ↑ </a></div>
 <h2>
-<a href="https://example.org/">low←tech magazine</a>
+    <a href="https://main--dulcet-daifuku-507020.netlify.app" style="text-decoration: none; color: var(--color-primary);">
+        
+        <pre style="font-family: monospace; margin: 0; font-size: 10px; line-height: 10px; color: var(--color-primary); background: rgba(255, 255, 255, 0) !important;">
+ _   _                  _ _                                   _     _                                                          
+| |_| |__   ___    __ _| | |_      ___ _ __   __ _  ___ ___  | |__ | | ___   __ _                                                             
+| __| '_ \ / _ \  / _` | | __|____/ __| '_ \ / _` |/ __/ _ \ | '_ \| |/ _ \ / _` |                                                                   
+| |_| | | |  __/ | (_| | | ||_____\__ \ |_) | (_| | (_|  __/ | |_) | | (_) | (_| |                                                              
+ \__|_| |_|\___|  \__,_|_|\__|    |___/ .__/ \__,_|\___\___| |_.__/|_|\___/ \__, |                                                                                                           
+                                      |_|                                   |___/  
+
+<pre style="font-family: monospace; margin: 0; font-size: 18px; line-height: 18px; color: var(--color-primary); background: rgba(255, 255, 255, 0) !important; text-align: left;">
+    .              +   .                .   . .     .  .
+    .                    .       .     *
+.       *                        . . . .  .   .  + .
+            "You Are Here"            .   .  +  . . .
+.                 |             .  .   .    .    . .
+                  |           .     .     . +.    +  .
+                 \|/            .       .   . .
+       . .        V          .    * . . .  .  +   .
++      .          .   .      +
+             .       . +  .+. .
+.                      .     . + .  . .     .      .  
+                    . + .  . .     .      .             
+ </pre>
+ 
+</a>
 </h2>
 <div class="dashboard">
 <ul class="grid">
 <li>
-<h3>Server Stats</h3>
-<dl id="stats">
-</dl>
-</li>
-<li>
-<h3>Forecast</h3>
-<div class="forecast"></div>
-</li>
-<li>
 <h3>Info</h3>
 <div class="footer-links">
-<a href="https://example.org/about">
+    <a href="https://main--dulcet-daifuku-507020.netlify.app/about">
   About
+
 </a>
-<a href="https://example.org/power">
-  Power
-</a>
-<a href="https://example.org/about/team">
-  Colophon
-</a>
-<a href="https://example.org/donate">
-  Donate
-</a>
-<a href="/privacy">
-  Privacy Policy
+
 </a>
 </div>
+</dl>
 </li>
 <li>
 <h3>Contact</h3>
 <p>
-                    © Kris De Decker<br/> solar [at] lowtechmagazine [dot] com</p>
-<div class="social">
-<a href="/feeds" rel="alternate" target="_blank" type="application/atom+xml"><svg class="icon" viewbox="0 0 80 80"><title>RSS Feed</title><circle cx="19.91" cy="58.23" r="6.86"></circle><path d="M67.89,65.72H55.7A41.86,41.86,0,0,0,13.89,23.91V11.73A54.06,54.06,0,0,1,67.89,65.72Z"></path><path d="M48.93,65.72H36.75A22.88,22.88,0,0,0,13.89,42.87V30.68A35.08,35.08,0,0,1,48.93,65.72Z"></path></svg></a>
-<a href="https://twitter.com/lowtechmagazine" target="_blank"><svg class="icon" viewbox="0 0 80 80"><title>Twitter</title><path d="M65.05,29.23c0,.56,0,1.12,0,1.68,0,17.1-13,36.8-36.8,36.8A36.54,36.54,0,0,1,8.44,61.91a26.68,26.68,0,0,0,3.12.16,25.9,25.9,0,0,0,16.06-5.53,13,13,0,0,1-12.09-9,16.28,16.28,0,0,0,2.44.2,13.67,13.67,0,0,0,3.4-.44A12.93,12.93,0,0,1,11,34.64v-.16a13,13,0,0,0,5.85,1.64,13,13,0,0,1-4-17.3A36.76,36.76,0,0,0,39.51,32.36a14.58,14.58,0,0,1-.32-3,12.95,12.95,0,0,1,22.38-8.85,25.45,25.45,0,0,0,8.21-3.12,12.9,12.9,0,0,1-5.69,7.13,25.93,25.93,0,0,0,7.45-2A27.79,27.79,0,0,1,65.05,29.23Z"></path></svg></a>
-<a href="https://www.patreon.com/lowtechmagazine" target="_blank"><svg class="icon" preserveaspectratio="xMidYMid" transform="scale(0.85)" viewbox="0 -4.5 256 256"><title>Patreon</title><path d="M45.1355837,0 L45.1355837,246.35001 L0,246.35001 L0,0 L45.1355837,0 Z M163.657111,0 C214.65668,0 256,41.3433196 256,92.3428889 C256,143.342458 214.65668,184.685778 163.657111,184.685778 C112.657542,184.685778 71.3142222,143.342458 71.3142222,92.3428889 C71.3142222,41.3433196 112.657542,0 163.657111,0 Z"> </path></svg></a>
-<a href="https://d69baa34.sibforms.com/serve/muieajwiw9w82dl4ua6fqarpai-3qb-zvtwpnabhqgfh51migf69smy9loc_hpoumbj0emaxsxt87gcqxdpvtu-azsjchwhkkv21cdrcqu4gdnyahz-mriphwgdecaglzyxqfvkaqxg2odcbju4byodmzjk3ztczdo2jcwtfn-en0mgklvkgxx9tgdhqyopabmjcmf-agleclewv" target="_blank"><svg class="icon" viewbox="0 0 80 80"><title>Newsletter</title><path d="M4.95,13.14v55H74.33v-55Zm54.34,8.12L39.64,39.74,20,21.26ZM13.07,60V25.91l26.56,25,26.57-25V60Z"></path></svg></a>
-</div>
+    © Éanna Cristin Doyle<br/> 
+    
+</p>
+</li>
+<li>
+<h3>Social</h3>
+    <div class="social">
+        TBA
+        
+        
+        </div>
+        
+    </li>
+            </li>
+            
+<li>
+<h3>Legal</h3>
+<p>
+</a>
+<a href="/privacy">
+  Privacy Policy
+</a>
+
 </li>
 </ul>
 </div>
+
+
 </footer>
-<script src="https://example.org/js/script.js"></script>
+
+	<script src="https://main--dulcet-daifuku-507020.netlify.appjs/script.js"></script>
 </body>
 </html>

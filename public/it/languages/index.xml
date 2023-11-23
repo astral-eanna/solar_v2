@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>low←tech magazine italiano</title>
-    <link>https://example.org/it/languages/</link>
+    <title>the alt-space blog italiano</title>
+    <link>https://main--dulcet-daifuku-507020.netlify.app/it/languages/</link>
     <description>Questo e un sito a energia solare, il che vuol dire che a volte va offline.</description>
     <generator>Hugo 0.120.3</generator>
-    <language>it</language><atom:link href="https://example.org/it/languages/index.xml" rel="self" type="application/rss+xml" />
+    <language>it</language><atom:link href="https://main--dulcet-daifuku-507020.netlify.app/it/languages/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
