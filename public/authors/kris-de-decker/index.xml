@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>low←tech magazine english</title>
+    <link>https://example.org/authors/kris-de-decker/</link>
+    <description>this is a solar-powered website, which means it sometimes goes offline</description>
+    <generator>Hugo 0.120.3</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/authors/kris-de-decker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Direct Solar Power Without Batteries</title>
+      <link>https://example.org/2023/08/direct_solar_power_without_batteries/</link>
+      
+      <enclosure url="https://example.org/2023/08/direct_solar_power_without_batteries/images/dithers/direct-solar-office_hu58e7c655d5b64006240b85a4dea52036_1309201_800x800_fit_q90_h2_box_dithered.png" type="image/png" length="46905" ></enclosure>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/2023/08/direct_solar_power_without_batteries/</guid>
+      <description>&lt;div class=&#34;article-img &#34;&gt;
+&lt;figure data-imgstate=&#34;dither&#34;&gt;
+&lt;img src=&#34;https://example.org/2023/08/direct_solar_power_without_batteries/images/dithers/direct-solar-office_hu58e7c655d5b64006240b85a4dea52036_1309201_800x800_fit_q90_h2_box_dithered.png&#34; alt=&#39;Image: a laptop running on direct solar power. Photo: Marie Verdeil.&#39; loading=&#34;lazy&#34;/&gt;&lt;/figure&gt;
+&lt;figcaption class=&#34;caption&#34;&gt;
+ Image: a laptop running on direct solar power. Photo: Marie Verdeil. 
+&lt;/figcaption&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Conventional solar installations do not question our dependence on fossil fuels and the energy-guzzling lifestyle that results. Both rooftop solar panels and large-scale solar farms provide us with all the power we want, even when the sun is not shining. That is because these systems use the central power grid, which largely runs on fossil fuels, as a kind of battery to cope with power shortages.&lt;/p&gt;
+&lt;p&gt;Although grid-connected solar panels can reduce the fossil fuel consumption of thermal power plants, these savings are at least partly offset by the additional fossil fuels required to build and maintain what is essentially a dual energy infrastructure. Combining solar and wind power can further increase the share of renewable energy in the power grid, but this requires further infrastructure development. Apart from energy, this also demands a lot of money and time.&lt;/p&gt;
+&lt;p&gt;Replacing fossil-fuel-fired power plants with energy storage, so that surplus electricity generated on sunny days can be stored for when there is no or insufficient sun, encounters the same problem. Energy storage, whether integrated into a power grid or located at individual households (off-grid systems), is very expensive and carbon-intensive to build and maintain.&lt;/p&gt;
+&lt;p&gt;Autonomous solar installation
+The production of solar panels obviously costs money and energy. However, the financial and energy costs of the associated back-up infrastructure are many times higher. For grid-connected solar installations, these costs are very difficult to calculate precisely, but for autonomous solar installations (without grid connection and with their own energy storage) it is a lot easier. As an example, I will therefore take the small autonomous solar installation that powers my living room in Barcelona.&lt;/p&gt;
+&lt;p&gt;This system consists of two 50W solar panels on the balcony, a 100 Ah lead-acid battery and a 10A charge controller. The energy generated is used for lighting, the music system, and charging laptops and other electronic devices, among other things. The initial financial investment was 340 euros: 120 euros for the solar panels, 170 euros for the battery and 50 euros for the charge controller.&lt;/p&gt;
+&lt;p&gt;But while the solar panels should last 30 years and the charge controller about 10 years, I have to replace the lead battery on average every three to five years. 1 Over a 30-year lifespan, the costs then amount to €120 for the solar panels, €150 for the charge controllers and – in the best case scenario – €1,020 for the batteries. The batteries (and associated charge controllers) therefore account for about 90% of the total lifetime costs.&lt;/p&gt;
+&lt;p&gt;Energy storage also dominates the plant’s “embedded” energy (and resulting carbon emissions). Producing my lead-acid battery took 1,200 megajoules (MJ) of energy. 2 Over a 30-year lifetime (six batteries at best), that equates to 7,200 MJ. The three charge controllers add another 360 MJ over a 30-year lifetime, bringing the total energy consumption for the battery system to 7,560 MJ. 3 In contrast, the production of the solar panels costs only 2,275 MJ out of a total of 9,835 MJ. 4 Conclusion: more than 75% of total fossil energy consumption is due to energy storage.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Revenge of the Hot Water Bottle</title>
+      <link>https://example.org/2022/01/the-revenge-of-the-hot-water-bottle/</link>
+      
+      <enclosure url="https://example.org/2022/01/the-revenge-of-the-hot-water-bottle/images/dithers/hot-water-bottles-bar-terrace_hu25c8cb9b925f33b48d215400da92af9a_756341_800x800_fit_q90_h2_box_dithered.png" type="image/png" length="40015" ></enclosure>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/2022/01/the-revenge-of-the-hot-water-bottle/</guid>
+      <description>&lt;div class=&#34;article-img &#34;&gt;
+&lt;figure data-imgstate=&#34;dither&#34;&gt;
+&lt;img src=&#34;https://example.org/2022/01/the-revenge-of-the-hot-water-bottle/images/dithers/hot-water-bottles-bar-terrace_hu25c8cb9b925f33b48d215400da92af9a_756341_800x800_fit_q90_h2_box_dithered.png&#34; alt=&#39;Hot water bottles could save a great deal of energy and money without sacrificing thermal comfort. They work both indoors and outdoors. Illustration: Marie Verdeil.&#39; loading=&#34;lazy&#34;/&gt;&lt;/figure&gt;
+&lt;figcaption class=&#34;caption&#34;&gt;
+ Hot water bottles could save a great deal of energy and money without sacrificing thermal comfort. They work both indoors and outdoors. Illustration: Marie Verdeil.    
+&lt;/figcaption&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;A hot water bottle is a sealable container filled with hot water, often enclosed in a textile cover, which is directly placed against a part of the body for thermal comfort. The hot water bottle is still a common household item in some places – such as the UK and Japan – but it is largely forgotten or disregarded in most of the industrialised world. If people know of it, they usually associate it with pain relief rather than thermal comfort, or they consider its use an outdated practice for the poor and the elderly.&lt;/p&gt;
+&lt;p&gt;Nevertheless, when I sent two dozen hot water bottles to friends and family as a Christmas present, the reactions were almost unanimously enthusiastic. People show themselves very much surprised that such a humble object can provide so much comfort. Because I don’t have the time nor the budget to send hot water bottles to everyone, I have written this article. It’s largely based on my personal experience – I have been using hot water bottles for many years and they are the only heat source in my apartment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How and Why I Stopped Buying New Laptops</title>
+      <link>https://example.org/2020/12/how-and-why-i-stopped-buying-new-laptops/</link>
+      
+      <enclosure url="https://example.org/2020/12/how-and-why-i-stopped-buying-new-laptops/images/dithers/X60-on-its-side-white_dithered_dithered.png" type="image/png" length="19263" ></enclosure>
+      <pubDate>Sun, 20 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/2020/12/how-and-why-i-stopped-buying-new-laptops/</guid>
+      <description>&lt;div class=&#34;article-img &#34;&gt;
+&lt;figure data-imgstate=&#34;dither&#34;&gt;
+&lt;img src=&#34;https://example.org/2020/12/how-and-why-i-stopped-buying-new-laptops/images/dithers/X60-on-its-side-white_dithered_dithered.png&#34; alt=&#39;Image: Low-tech Magazine is now written and published on a 2006 ThinkPad X60s.&#39; loading=&#34;lazy&#34;/&gt;&lt;/figure&gt;
+&lt;figcaption class=&#34;caption&#34;&gt;
+ Image: Low-tech Magazine is now written and published on a 2006 ThinkPad X60s.  
+&lt;/figcaption&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Being an independent journalist – or an office worker if you wish – I always reasoned that I needed a decent computer and that I need to pay for quality. Between 2000 and 2017, I consumed three laptops that I bought new and which cost me around 5,000 euros in total – roughly 300 euros per year over the entire period. The average useful life of my three laptops was 5.7 years.&lt;/p&gt;
+&lt;p&gt;In 2017, somewhere between getting my office, I decided not to buy any more new laptops. Instead, I switched to a 2006 second-hand machine that I purchased online for 50 euros and which does everything that I want and need. Including a new battery and a simple hardware upgrade, I invested less than 150 euros.&lt;/p&gt;
+&lt;p&gt;If my 2006 laptop lasts as long as my other machines – if it runs for another 1.7 years – it will have cost me only 26 euros per year. That’s more than 10 times less than the cost of my previous laptops. In this article, I explain my motivations for not buying new laptops, and how you could do the same.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>low←tech magazine français</title>
+    <link>https://example.org/fr/</link>
+    <description>Ce site fonctionne à l’énergie solaire, et se retrouve parfois hors-ligne</description>
+    <generator>Hugo 0.120.3</generator>
+    <language>fr</language><atom:link href="https://example.org/fr/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

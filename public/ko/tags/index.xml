@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>low←tech magazine 한국어</title>
+    <link>https://example.org/ko/tags/</link>
+    <description>this is a solar-powered website, which means it sometimes goes offline</description>
+    <generator>Hugo 0.120.3</generator>
+    <language>ko</language><atom:link href="https://example.org/ko/tags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
