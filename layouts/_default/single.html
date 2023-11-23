@@ -12,17 +12,28 @@
 					{{ .Summary }}
 				</p>
 				<div class="metadata">
-					{{/*  disable metadata author for about category  */}}
+					{{/* Disable metadata author for the "About" category */}}
 					{{ if not (in .Params.categories "About") }}
-						{{if (.GetTerms "authors")}}
+						{{ if (.GetTerms "authors") }}
 							<div class="authors">
-							<span class="byline">{{i18n "written_by" | default "Written by" }}</span>
-							{{ range (.GetTerms "authors") }}
-									<span class="author"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
-							{{ end }}
+								{{ range (.GetTerms "authors") }}
+									<div class="author-container">
+										<div class="author-photo">
+											<img src="/images/eanna_dithered.png" alt="Author Photo">
+										</div>
+										
+										<span class="byline">{{ i18n "written_by" | default "Written by" }}</span>
+										<div class="author-info">
+											<a href="{{ .Permalink }}" class="author-link" >
+												<span class="author-name">{{ .Title }}</span>
+											</a>
+										</div>
+									</div>
+								{{ end }}
 							</div>
 						{{ end }}
 					{{ end }}
+				</div>
 					
 						{{ if (.GetTerms "translators") }}
 
@@ -80,28 +91,27 @@
 		{{ if $tags }}
 		
 		<section id="related" class="article-list">
-		    <h3 class="related">Related Articles</h3>
-		    <div class="post-info gray">
-		    <p class="tags">{{ i18n "theme" | default "Themes"}}:
-		        {{ range $tags }}
-		            <a href="{{ .Permalink }}" class="tag">{{ .LinkTitle }}</a>
-		        {{ end }}
-		    </p>
-		    </div>
-		    <div class="grid">
-				{{ $allposts :=  where .Site.RegularPages "Type" "in" "posts" }}
-				{{ $notunlisted := where site.RegularPages ".Params.unlisted" "!=" "true" }} 
-				{{ $posts := $allposts | intersect $notunlisted }}
-		{{ $related :=  $posts.RelatedIndices . "tags" "lang"   | first 4}}
-		{{ range $related }}
-		{{ if isset .Params ("categories")  }}
-	
-		{{ partial "article-list/default" . }}
-	
-		{{ end }}
-		{{ end }}
-		    </div>
+			<h3 class="related">Related Articles</h3>
+			<div class="post-info gray">
+				<p class="tags">{{ i18n "theme" | default "Themes"}}:
+					{{ range $tags }}
+						<a href="{{ .Permalink }}" class="tag">{{ .LinkTitle }}</a>
+					{{ end }}
+				</p>
+			</div>
+			<div class="grid">
+				{{ $currentTags := .Params.tags }}
+				{{ $allposts := where .Site.RegularPages "Type" "in" "posts" }}
+				{{ $notunlisted := where $allposts ".Params.unlisted" "!=" "true" }}
+				{{ $related := where $notunlisted ".Params.tags" "intersect" $currentTags | first 4 }}
+				{{ range $related }}
+					{{ if isset .Params "categories" }}
+						{{ partial "article-list/default" . }}
+					{{ end }}
+				{{ end }}
+			</div>
 		</section>
+		
 		{{ end }}
 		
 	</article>

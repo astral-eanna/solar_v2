@@ -1,15 +1,19 @@
 ---
-title: "What is Low-tech Magazine?"
-summary: "Low-tech Magazine underscores the potential of past and often forgotten technologies and how they can inform sustainable energy practices."
-slug: "what-is-low-tech-magazine"
+title: "What is Alternative Space Blog?"
+summary: "A cosmic sanctuary where the interplay of diverse ideas and perspectives creates new ground for our space-bound ideas."
+slug: "what-is-alternative-space-blog"
 lang: "en"
-authors: ["Kris De Decker" ]
+authors: ["Éanna Cristin Doyle"]
 categories: ["About"]
-# tags: ["ICT", "another tag", "another other tag"]
-featured_image: "serverandbattery003_hu2974727640747bd601c1e5f7afb9e0b8_3814576_800x800_fit_q90_h2_box.webp"
+# tags: ["Space", "Exploration", "Alternative Perspectives"]
+featured_image: "starburst.webp"
 draft: false
 ---
 
-Technology has become the idol of our society, but technological progress is—more often than not—aimed at solving problems caused by earlier technical inventions. There is a lot of potential in past and often forgotten knowledge and technologies when it comes to designing a sustainable society. Interesting possibilities arise when we combine old technology with new knowledge and new materials, or when we apply old concepts and traditional knowledge to modern technology.
+In a world where the clamor of echoed conformity drowns out individuality, Alternative Space Blog emerges as a beacon for those seeking a departure from conventional space discourse. We believe in the untapped potential of alternative perspectives, aiming to cultivate greater diversity in our collective cosmic imagination.
 
-Low-tech Magazine was founded in November 2007. Since 2018, the magazine also runs on a solar powered server. The website is also available in Spanish, French, Dutch, German, and Polish. Since 2019, LTM also appears in print. Low-tech Magazine publishes at most 12 well-researched stories per year. Sister blog No Tech Magazine brings more regular updates.
+Founded with a mission to explore the often-overlooked realms of space, our digital voyage commenced in the tail-end of 2023. Just as the inspiration for this blog, [Low-tech Magazine](https://solar.lowtechmagazine.com), harnessed the power of the sun with a solar-powered server, we too embrace a self-hosted approach that liberates our content from the constraints of mainstream platforms.
+
+Alternative Space Blog is not merely a digital space; it's a cosmic sanctuary where the interplay of diverse ideas and perspectives creates new ground for space-bound ideas to emerge.
+
+Join us on this journey as we challenge the boundaries of space discourse and invite you to reimagine the vast universe that lies beyond the ordinary.

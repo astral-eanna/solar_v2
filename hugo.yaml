@@ -1,6 +1,6 @@
 baseurl: "https://example.org/"
 languagecode: "en-us"
-title: "low←tech magazine"
+title: "the alt-space blog"
 buildfuture: true
 builddrafts: false
 paginate: 12
@@ -22,36 +22,36 @@ permalinks:
   posts: "/:year/:month/:slugorfilename/"
   categories: "/:slug/"
 params:
-  author: "kris de decker"
+  author: "éanna cristin doyle"
   newsletter: "https://d69baa34.sibforms.com/serve/muieajwiw9w82dl4ua6fqarpai-3qb-zvtwpnabhqgfh51migf69smy9loc_hpoumbj0emaxsxt87gcqxdpvtu-azsjchwhkkv21cdrcqu4gdnyahz-mriphwgdecaglzyxqfvkaqxg2odcbju4byodmzjk3ztczdo2jcwtfn-en0mgklvkgxx9tgdhqyopabmjcmf-agleclewv"
-  description: "this is a solar-powered website, which means it sometimes goes offline"
+  description: "an alternative space blog, exploring the cosmos from unconventional perspectives 🔭"
 
 menu:
   main:
     - name: about
       pageref: /about
       weight: 1
-    - name: low-tech solutions
-      pageref: /low-tech-solutions
+    - name: human in space
+      pageref: /human-in-space
       weight: 2
-    - name: high-tech problems
-      pageref: /high-tech-problems
+    - name: earth and sustainability
+      pageref: /earth-and-sustainability
       weight: 3
-    - name: obsolete technology
-      pageref: /obsolete-technology
+    - name: pancosmic perspectives
+      pageref: /pancosmic-perspectives
       weight: 4
-    - name: offline reading
-      pageref: /offline-reading
-      weight: 5
-    - name: archive
-      pageref: /archives
-      weight: 6
-    - name: donate
-      pageref: /donate
-      weight: 7
-    - name: ntm
-      url: "https://www.notechmagazine.com/"
-      weight: 8
+    # - name: offline reading
+    #   pageref: /offline-reading
+    #   weight: 5
+    # - name: archive
+    #   pageref: /archives
+    #   weight: 6
+    # - name: donate
+    #   pageref: /donate
+    #   weight: 7
+    # - name: ntm
+    #   url: "https://www.notechmagazine.com/"
+    #   weight: 8
 
 defaultcontentlanguage: "en"
 
