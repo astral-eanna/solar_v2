@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>the alt-space blog nederlands</title>
-    <link>https://main--dulcet-daifuku-507020.netlify.app/nl/</link>
+    <link>https://altspaceblog.com/nl/</link>
     <description>Deze website draait op zonne-energie, wat betekent dat ze af en toe uit de lucht gaat</description>
     <generator>Hugo 0.120.3</generator>
-    <language>nl</language><atom:link href="https://main--dulcet-daifuku-507020.netlify.app/nl/index.xml" rel="self" type="application/rss+xml" />
+    <language>nl</language><atom:link href="https://altspaceblog.com/nl/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
