@@ -43,8 +43,8 @@ menu:
     # - name: offline reading
     #   pageref: /offline-reading
     #   weight: 5
-    # - name: archive
-    #   pageref: /archives
+    - name: archive
+      pageref: /archives
     #   weight: 6
     # - name: donate
     #   pageref: /donate
