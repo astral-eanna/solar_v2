@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>the alt-space blog nederlands</title>
-    <link>https://altspaceblog.com/nl/categories/</link>
+    <link>--destination/nl/categories/</link>
     <description>Deze website draait op zonne-energie, wat betekent dat ze af en toe uit de lucht gaat</description>
     <generator>Hugo 0.120.3</generator>
-    <language>nl</language><atom:link href="https://altspaceblog.com/nl/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>nl</language><atom:link href="--destination/nl/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

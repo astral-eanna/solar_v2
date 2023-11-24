@@ -192,15 +192,32 @@ footer {
   padding-top: 30px;
   animation: fadeIn 1.2s ease-in-out forwards; }
   .site-header a pre {
-    font-size: 1.1vw;
+    font-size: 16px;
     /* Adjust the font size as needed */
-    line-height: 1.1vw;
+    line-height: 16px;
     /* Adjust the line height as needed */
+    font-weight: bold;
     color: var(--color-head);
     background: linear-gradient(to right, #ff5500, #0072c2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background-position 1.5s ease-in-out; }
+    @media only screen and (max-width: 980px) {
+      .site-header a pre {
+        font-size: 1.5vw;
+        /* Set a minimum font size for smaller screens */
+        line-height: 1.5vw;
+        /* Set a minimum line height for smaller screens */
+        font-weight: bold;
+        /* Increase font weight for better visibility */ } }
+    @media only screen and (max-width: 600px) {
+      .site-header a pre {
+        font-size: 1.8vw;
+        /* Set a minimum font size for smaller screens */
+        line-height: 1.8vw;
+        /* Set a minimum line height for smaller screens */
+        font-weight: bold;
+        /* Increase font weight for better visibility */ } }
   .site-header a pre:hover {
     background-position: 100%;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
@@ -436,7 +453,7 @@ METADATA, BYLINES
     text-decoration: none; }
   .metadata .author-name {
     line-height: 1.4; }
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 600px) {
     .metadata .byline,
     .metadata .author-name {
       display: inline-block;
@@ -582,7 +599,7 @@ ARCHIVES
     margin: 0;
     width: 20%; }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   #archive-list #title,
   #archive-list #date,
   #archive-list #cat {
@@ -1125,7 +1142,7 @@ Global Responsive Styles
     #menu-list.show {
       height: 100%; } }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   :root {
     --font-xlarge: 2rem;
     --font-large: 1.4rem; }

@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>the alt-space blog english</title>
-    <link>https://altspaceblog.com/authors/%C3%A9anna-cristin-doyle/</link>
+    <link>--destination/authors/%C3%A9anna-cristin-doyle/</link>
     <description>an alternative space blog, exploring the cosmos from unconventional perspectives 🔭</description>
     <generator>Hugo 0.120.3</generator>
-    <language>en</language><atom:link href="https://altspaceblog.com/authors/%C3%A9anna-cristin-doyle/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="--destination/authors/%C3%A9anna-cristin-doyle/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
