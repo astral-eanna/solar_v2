@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>the alt-space blog polski</title>
-    <link>--destination/pl/authors/</link>
+    <link>https://altspaceblog.com/pl/authors/</link>
     <description>Ta strona zasilana jest energią słoneczną co oznacza, że czasami może być niedostępna.</description>
     <generator>Hugo 0.120.3</generator>
-    <language>pl</language><atom:link href="--destination/pl/authors/index.xml" rel="self" type="application/rss+xml" />
+    <language>pl</language><atom:link href="https://altspaceblog.com/pl/authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

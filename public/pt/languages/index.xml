@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>the alt-space blog português</title>
-    <link>--destination/pt/languages/</link>
+    <link>https://altspaceblog.com/pt/languages/</link>
     <description>Este site é movido a energia solar, o que significa que, às vezes, ele fica fora do ar.</description>
     <generator>Hugo 0.120.3</generator>
-    <language>pt</language><atom:link href="--destination/pt/languages/index.xml" rel="self" type="application/rss+xml" />
+    <language>pt</language><atom:link href="https://altspaceblog.com/pt/languages/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
