@@ -23,7 +23,7 @@
         }
     }
     @if $breakpoint==mobile {
-        @media only screen and (max-width: 550px) {
+        @media only screen and (max-width: 600px) {
             @content;
         }
     }
@@ -224,14 +224,26 @@ footer {
   
     // Style for the ASCII art in the header
     a pre {
-      font-size: 1.1vw; /* Adjust the font size as needed */
-      line-height: 1.1vw; /* Adjust the line height as needed */
+      font-size: 16px; /* Adjust the font size as needed */
+      line-height: 16px; /* Adjust the line height as needed */
+      font-weight: bold;
+      
+      @include media(tablet) {
+        font-size: 1.5vw; /* Set a minimum font size for smaller screens */
+        line-height: 1.5vw; /* Set a minimum line height for smaller screens */
+        font-weight: bold; /* Increase font weight for better visibility */
+    }
+      
+      @include media(mobile) {
+        font-size: 1.8vw; /* Set a minimum font size for smaller screens */
+        line-height: 1.8vw; /* Set a minimum line height for smaller screens */
+        font-weight: bold; /* Increase font weight for better visibility */
+    }
       color: var(--color-head); // Use your desired color
       background: linear-gradient(to right, #ff5500, #0072c2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: background-position 1.5s ease-in-out; // Add a smooth transition effect
-        
     }
   
     // Hover effect for the ASCII art in the header
