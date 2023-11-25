@@ -41,9 +41,12 @@
   --font-small: 0.8rem;
   --max-img-width: 1200px;
   --max-content-width: 28rem;
+  --mobile-max-content-width: 32rem;
   --content-width: 70%;
-  /* Light mode styles */
-  --bg-light: var(--color-bg);
+  --mobile-content-width: 80%
+  
+    /* Light mode styles */
+    --bg-light: var(--color-bg);
   --text-light: var(--color-primary);
   /* Dark mode styles */
   --bg-dark: #1a1a1a;
@@ -74,6 +77,12 @@ body {
   /* Remove default body margin */
   color: var(--color-primary);
   padding: var(--pad-large); }
+
+::selection {
+  background: linear-gradient(to right, var(--color-earth), var(--color-pancosmic));
+  /* Adjust gradient colors */
+  color: #fff;
+  text-shadow: 0 0 10px rgba(237, 28, 132, 0.99), 0 0 20px rgba(245, 140, 98, 0.7), 0 0 40px rgba(75, 105, 255, 0.7), 0 0 50px rgba(102, 204, 255, 0.7), 0 0 70px rgba(0, 156, 167, 0.7); }
 
 /* DARK MODE TOGGLE */
 .dark-mode-toggle {
@@ -174,18 +183,65 @@ main {
   margin-bottom: var(--pad-large); }
 
 main,
+.site-header,
+.site-footer {
+  /* Define the style class for the footer container */
+  /* Define the style class for the ASCII art */
+  /* Responsive styles for smaller screens */
+  /* Additional styles for even smaller screens if needed */ }
+  main a,
+  .site-header a,
+  .site-footer a {
+    border-bottom: 0;
+    padding-bottom: 0; }
+  main .footer,
+  .site-header .footer,
+  .site-footer .footer {
+    text-align: center; }
+  main .ascii-art,
+  .site-header .ascii-art,
+  .site-footer .ascii-art {
+    font-family: monospace;
+    font-size: 10px;
+    /* Change this to your desired font size */
+    line-height: 1.1;
+    /* Adjust line height as needed */
+    color: var(--color-primary);
+    text-align: left;
+    margin: 0;
+    /* Remove any default margin */
+    /* Add a colorful gradient background clipped to text on hover */
+    transition: background 0.3s ease-in-out;
+    background: linear-gradient(45deg, rgba(255, 154, 158, 0.7), rgba(250, 208, 196, 0.7), rgba(250, 208, 196, 0.7), rgba(161, 196, 253, 0.7), rgba(194, 233, 251, 0.7), rgba(253, 187, 45, 0.7), rgba(34, 193, 195, 0.7), rgba(253, 187, 45, 0.7), rgba(194, 233, 251, 0.7), rgba(161, 196, 253, 0.7), rgba(250, 208, 196, 0.7), rgba(250, 208, 196, 0.7), rgba(255, 154, 158, 0.7));
+    /* Adjust the color stops for a colorful gradient effect */
+    background-clip: text;
+    color: transparent;
+    /* Set text color to transparent to allow the background to show through */ }
+  main .ascii-art:hover,
+  .site-header .ascii-art:hover,
+  .site-footer .ascii-art:hover {
+    background: linear-gradient(45deg, rgba(255, 154, 158, 0.9), rgba(250, 208, 196, 0.8), rgba(250, 208, 196, 0.7), rgba(161, 196, 253, 0.6), rgba(194, 233, 251, 0.5), rgba(253, 187, 45, 0.6), rgba(34, 193, 195, 0.7), rgba(253, 187, 45, 0.8), rgba(194, 233, 251, 0.9), rgba(161, 196, 253, 0.8), rgba(250, 208, 196, 0.7), rgba(250, 208, 196, 0.8), rgba(255, 154, 158, 0.9));
+    /* Adjust the color stops for the hover effect */
+    color: var(--color-primary);
+    /* Restore the text color on hover */ }
+  @media only screen and (max-width: 980px) {
+    main pre,
+    .site-header pre,
+    .site-footer pre {
+      font-size: 9px;
+      line-height: 9px; } }
+  @media only screen and (max-width: 600px) {
+    main pre,
+    .site-header pre,
+    .site-footer pre {
+      font-size: 7px;
+      line-height: 7px; } }
+/* Styles for the footer */
 footer {
   border-top: 1.5px dashed var(--color-primary);
-  /* Changed to dashed line */
   padding: 0px;
-  /* Adjust the padding as needed */
   margin-top: -15px;
-  /* Added margin for spacing */ }
-
-.site-header a,
-.site-footer a {
-  border-bottom: 0;
-  padding-bottom: 0; }
+  /* Adjusted margin for spacing */ }
 
 .site-header {
   text-align: center;
@@ -198,7 +254,7 @@ footer {
     /* Adjust the line height as needed */
     font-weight: bold;
     color: var(--color-head);
-    background: linear-gradient(to right, #ff5500, #0072c2);
+    background: linear-gradient(to right, #ed1c84, #ff8000, #0073ff, #00c1c3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background-position 1.5s ease-in-out; }
@@ -317,7 +373,7 @@ nav {
 
 /* Add a rectangular gradient background to the nav items on hover */
 nav a:hover {
-  background: linear-gradient(to right, #ffcc00, #ff6600);
+  background: linear-gradient(to right, #ffcc00, #ed1c84);
   text-shadow: 0 0 5px #dbfdfd, 0 0 10px rgba(0, 255, 255, 0.5); }
 
 nav a:hover {
@@ -519,7 +575,7 @@ time {
     margin-top: 0;
     font-size: 3.4em;
     color: var(--color-head);
-    background: linear-gradient(to right, #ff5500, #0072c2);
+    background: linear-gradient(to right, #ed1c84, #ff8000, #0073ff, #00c1c3);
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.5px #333;
     /* Dark grey text stroke */
@@ -658,7 +714,7 @@ ARTICLE TYPOGRAPHY
 .entry-title {
   margin: var(--pad-large) 0 var(--pad) 0;
   color: var(--color-head);
-  background: linear-gradient(to right, #ff5500, #0072c2);
+  background: linear-gradient(to right, #ed1c84, #ff8000, #0073ff, #00c1c3);
   -webkit-background-clip: text;
   -webkit-text-stroke: 0.5px #333;
   /* Dark grey text stroke */
@@ -669,6 +725,10 @@ ARTICLE TYPOGRAPHY
 .entry-title:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   /* Adjust the values for the desired shadow */ }
+
+@media only screen and (max-width: 600px) {
+  font-size: 80px;
+  /* Adjust this value to your liking for mobile */ }
 
 .entry-header,
 figure,
@@ -691,7 +751,22 @@ figure,
 .entry-content #comment-list {
   max-width: var(--max-content-width);
   width: var(--content-width); }
-
+  @media only screen and (max-width: 600px) {
+    .entry-content h2,
+    .entry-content h3,
+    .entry-content h4,
+    .entry-content h5,
+    .entry-content p,
+    .entry-content dl,
+    .entry-content ol,
+    .entry-content ul,
+    .entry-content pre,
+    .entry-content table,
+    .entry-content blockquote,
+    .entry-content details,
+    .entry-content #comment-list {
+      max-width: var(--mobile-max-content-width);
+      width: var(--mobile-content-width); } }
 .entry-content pre {
   margin: auto; }
 
@@ -716,7 +791,17 @@ figure,
 .entry-content ul,
 .entry-content dl {
   margin: var(--pad-large) auto; }
-
+  @media only screen and (max-width: 600px) {
+    .entry-content h4,
+    .entry-content p,
+    .entry-content details,
+    .entry-content table,
+    .entry-content ol,
+    .entry-content ul,
+    .entry-content dl {
+      margin: var(--pad-small) auto;
+      font-size: 20px;
+      /* Adjust this value to your liking for mobile */ } }
 .entry-content ol,
 .entry-content ul {
   line-height: 1.4; }
@@ -1117,10 +1202,15 @@ footer .weather_text {
 Global Responsive Styles
 ------------*/
 @media only screen and (max-width: 980px) {
+  :root {
+    --font-xlarge: 4.4rem;
+    --font-large: 1.8rem; }
   html {
     font-size: 18px; }
   .article-list .grid .article {
     grid-column: span 2; }
+  .article-list .grid .entry-title {
+    font-size: var(--font-large); }
   #menu-s span {
     display: block;
     text-transform: uppercase;
@@ -1140,16 +1230,20 @@ Global Responsive Styles
     overflow: hidden;
     transition: height 300ms ease-in-out; }
     #menu-list.show {
-      height: 100%; } }
+      height: 100%; }
+  .entry-title {
+    font-size: var(--font-xlarge); } }
 
 @media only screen and (max-width: 600px) {
   :root {
-    --font-xlarge: 2rem;
-    --font-large: 1.4rem; }
+    --font-xlarge: 4.4rem;
+    --font-large: 2.4rem; }
   html {
     font-size: 16px; }
   #menu-s span {
     padding-top: 3px; }
+  .entry-title {
+    font-size: var(--font-xlarge); }
   .cover .image {
     grid-row: 1; }
   .cover .text {
@@ -1160,6 +1254,8 @@ Global Responsive Styles
       margin-bottom: var(--pad-section); }
     .article-list .grid .featured-img {
       margin-bottom: 0; }
+    .article-list .grid .entry-title {
+      font-size: var(--font-large); }
   sup {
     font-size: 0.7em; }
   .footnotes ol {

@@ -55,7 +55,9 @@
     --font-small: 0.8rem;
     --max-img-width: 1200px;
     --max-content-width: 28rem;
+    --mobile-max-content-width: 32rem;
     --content-width: 70%;
+    --mobile-content-width: 80%
   
     /* Light mode styles */
     --bg-light: var(--color-bg);
@@ -96,7 +98,15 @@ body {
     color: var(--color-primary);
     padding: var(--pad-large);
 }
-
+      ::selection {
+        background: linear-gradient(to right, var(--color-earth), var(--color-pancosmic)); /* Adjust gradient colors */
+        color: #fff;
+        text-shadow: 0 0 10px rgba(237, 28, 132, 0.99),
+        0 0 20px rgba(245, 140, 98, 0.7),
+        0 0 40px rgba(75, 105, 255, 0.7),
+        0 0 50px rgba(102, 204, 255, 0.7),
+        0 0 70px rgba(0, 156, 167, 0.7);
+}
 
 /* DARK MODE TOGGLE */
 
@@ -202,19 +212,92 @@ main {
 }
 
 main,
-footer {
-    border-top: 1.5px dashed var(--color-primary); /* Changed to dashed line */
-    padding: 0px; /* Adjust the padding as needed */
-    margin-top: -15px; /* Added margin for spacing */
-
-}
-
+/* Common styles for header and footer links */
 .site-header,
 .site-footer {
     a {
         border-bottom: 0;
         padding-bottom: 0;
     }
+        /* Define the style class for the footer container */
+        .footer {
+            text-align: center;
+        }
+
+        /* Define the style class for the ASCII art */
+        .ascii-art {
+            font-family: monospace;
+            font-size: 10px; /* Change this to your desired font size */
+            line-height: 1.1; /* Adjust line height as needed */
+            color: var(--color-primary);
+            text-align: left;
+            margin: 0; /* Remove any default margin */
+        
+            /* Add a colorful gradient background clipped to text on hover */
+            transition: background 0.3s ease-in-out;
+            background: linear-gradient(
+                45deg,
+                rgba(255, 154, 158, 0.7),
+                rgba(250, 208, 196, 0.7),
+                rgba(250, 208, 196, 0.7),
+                rgba(161, 196, 253, 0.7),
+                rgba(194, 233, 251, 0.7),
+                rgba(253, 187, 45, 0.7),
+                rgba(34, 193, 195, 0.7),
+                rgba(253, 187, 45, 0.7),
+                rgba(194, 233, 251, 0.7),
+                rgba(161, 196, 253, 0.7),
+                rgba(250, 208, 196, 0.7),
+                rgba(250, 208, 196, 0.7),
+                rgba(255, 154, 158, 0.7)
+            ); /* Adjust the color stops for a colorful gradient effect */
+            background-clip: text;
+            color: transparent; /* Set text color to transparent to allow the background to show through */
+        }
+        
+        .ascii-art:hover {
+            background: linear-gradient(
+                45deg,
+                rgba(255, 154, 158, 0.9),
+                rgba(250, 208, 196, 0.8),
+                rgba(250, 208, 196, 0.7),
+                rgba(161, 196, 253, 0.6),
+                rgba(194, 233, 251, 0.5),
+                rgba(253, 187, 45, 0.6),
+                rgba(34, 193, 195, 0.7),
+                rgba(253, 187, 45, 0.8),
+                rgba(194, 233, 251, 0.9),
+                rgba(161, 196, 253, 0.8),
+                rgba(250, 208, 196, 0.7),
+                rgba(250, 208, 196, 0.8),
+                rgba(255, 154, 158, 0.9)
+            ); /* Adjust the color stops for the hover effect */
+            color: var(--color-primary); /* Restore the text color on hover */
+        }
+
+                /* Responsive styles for smaller screens */
+            @include media(tablet) {
+            pre {
+                font-size: 9px;
+                line-height: 9px;
+            }
+                 }
+
+            /* Additional styles for even smaller screens if needed */
+            @include media(mobile) {
+             pre {
+            font-size: 7px; 
+            line-height: 7px; 
+                 }
+             }
+        }
+
+/* Styles for the footer */
+footer {
+    border-top: 1.5px dashed var(--color-primary);
+    padding: 0px;
+    margin-top: -15px; /* Adjusted margin for spacing */
+
 }
 
 .site-header {
@@ -240,7 +323,13 @@ footer {
         font-weight: bold; /* Increase font weight for better visibility */
     }
       color: var(--color-head); // Use your desired color
-      background: linear-gradient(to right, #ff5500, #0072c2);
+      background: linear-gradient(
+        to right,
+        #ed1c84,
+        #ff8000,
+        #0073ff,
+        #00c1c3,
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: background-position 1.5s ease-in-out; // Add a smooth transition effect
@@ -453,7 +542,7 @@ nav {
 
 /* Add a rectangular gradient background to the nav items on hover */
 nav a:hover {
-    background: linear-gradient(to right, #ffcc00, #ff6600); 
+    background: linear-gradient(to right, #ffcc00, #ed1c84); 
     text-shadow: 0 0 5px rgb(219, 253, 253), 0 0 10px rgba(0, 255, 255, 0.5);
 }
 nav a:hover {
@@ -668,7 +757,13 @@ time {
     color: var(--color-sub);
     font-size: var(--font-small);
     font-weight: regular;
-    // background: linear-gradient(to right, rgba(255, 85, 0, 0.1), rgba(0, 114, 194, 0.1), rgba(237, 28, 132, 0.1)); /* Use rgba for transparent colors */
+    // background: linear-gradient(
+    //     to right,
+    //     #ff0040,
+    //     #ff8000,
+    //     #0073ff,
+    //     #00c1c3,
+    //   ); /* Use rgba for transparent colors */
     // width: fit-content; /* Set width to fit the content */
     // text-decoration: none !important; /* Remove underline */
 }
@@ -725,7 +820,13 @@ time {
         margin-top: 0;
         font-size: 3.4em;
         color: var(--color-head);
-        background: linear-gradient(to right, #ff5500, #0072c2);
+        background: linear-gradient(
+            to right,
+            #ed1c84,
+            #ff8000,
+            #0073ff,
+            #00c1c3,
+          );
         -webkit-background-clip: text;
         -webkit-text-stroke: 0.5px #333; /* Dark grey text stroke */
         color: transparent;
@@ -904,7 +1005,13 @@ ARTICLE TYPOGRAPHY
     margin: var(--pad-large) 0 var(--pad) 0;
         // font-size: 2em;
         color: var(--color-head);
-        background: linear-gradient(to right, #ff5500, #0072c2);
+        background: linear-gradient(
+            to right,
+            #ed1c84,
+            #ff8000,
+            #0073ff,
+            #00c1c3,
+          );
         -webkit-background-clip: text;
         -webkit-text-stroke: 0.5px #333; /* Dark grey text stroke */
         color: transparent;
@@ -914,6 +1021,9 @@ ARTICLE TYPOGRAPHY
       .entry-title:hover {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the values for the desired shadow */
       }
+      @include media(mobile) {     
+            font-size: 80px; /* Adjust this value to your liking for mobile */
+    }
 
 // width settings
 .entry-header,
@@ -939,6 +1049,11 @@ figure,
     #comment-list {
         max-width: var(--max-content-width);
         width: var(--content-width);
+        @include media(mobile) {
+            max-width: var(--mobile-max-content-width);
+            width: var(--mobile-content-width);
+    
+    }
     }
     pre {
         margin: auto;
@@ -965,7 +1080,14 @@ figure,
     ol,
     ul,
     dl {
+
         margin: var(--pad-large) auto;
+        
+        @include media(mobile) {     
+            margin: var(--pad-small) auto;
+            font-size: 20px; /* Adjust this value to your liking for mobile */
+    
+    }
     }
     ol,
     ul {
@@ -1497,12 +1619,19 @@ Global Responsive Styles
 ------------*/
 
 @include media(tablet) {
+    :root{
+        --font-xlarge: 4.4rem;
+        --font-large: 1.8rem;
+    }
     html {
         font-size: 18px;
     }
     .article-list .grid {
         .article {
             grid-column: span 2;
+        }
+        .entry-title{
+            font-size: var(--font-large);
         }
     }
     //menu
@@ -1538,18 +1667,25 @@ Global Responsive Styles
         //     left: -2px;
         // }
     }
+    .entry-title{
+        font-size: var(--font-xlarge);
+    }
 }
 
 @include media(mobile) {
     :root{
-        --font-xlarge: 2rem;
-        --font-large: 1.4rem;
+        --font-xlarge: 4.4rem;
+        --font-large: 2.4rem;
     }
     html {
         font-size: 16px;
     }
     #menu-s span{
         padding-top: 3px;
+    }
+
+    .entry-title{
+        font-size: var(--font-xlarge);
     }
     .cover {
         .image {
@@ -1566,6 +1702,9 @@ Global Responsive Styles
         }
         .featured-img{
             margin-bottom: 0;
+        }
+        .entry-title{
+            font-size: var(--font-large);
         }
     }
     sup{
